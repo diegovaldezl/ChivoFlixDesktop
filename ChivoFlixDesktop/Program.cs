@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using ChivoFlixDesktop.Model;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Windows.Forms;
 
 namespace ChivoFlixDesktop
@@ -14,9 +13,16 @@ namespace ChivoFlixDesktop
         [STAThread]
         static void Main()
         {
+            masterContext context = new masterContext();
+            Conexion obj1 = new Conexion();
+            if (context.Database.ProviderName != "Microsoft.EntityFrameworkCore.InMemory")
+            {
+                obj1.crearBD();
+                context.Database.Migrate();
+            }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Login());
         }
     }
 }
