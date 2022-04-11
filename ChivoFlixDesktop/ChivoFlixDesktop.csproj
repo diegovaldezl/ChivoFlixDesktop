@@ -169,17 +169,47 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Conexion.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Facturacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Facturacion.designer.cs">
+      <DependentUpon>Facturacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListadoCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoCategorias.designer.cs">
+      <DependentUpon>ListadoCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListadoPeliculas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoPeliculas.designer.cs">
+      <DependentUpon>ListadoPeliculas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListadoPlanes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoPlanes.designer.cs">
+      <DependentUpon>ListadoPlanes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListadoUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoUsuarios.designer.cs">
+      <DependentUpon>ListadoUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\20220411004702_init.cs" />
     <Compile Include="Migrations\20220411004702_init.designer.cs">
@@ -194,13 +224,64 @@
     <Compile Include="Model\Roles.cs" />
     <Compile Include="Model\Tarjetas.cs" />
     <Compile Include="Model\Usuarios.cs" />
+    <Compile Include="NuevaCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevaCategoria.designer.cs">
+      <DependentUpon>NuevaCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuevaPelicula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevaPelicula.designer.cs">
+      <DependentUpon>NuevaPelicula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuevoPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevoPlan.designer.cs">
+      <DependentUpon>NuevoPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuevoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevoUsuario.designer.cs">
+      <DependentUpon>NuevoUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Facturacion.resx">
+      <DependentUpon>Facturacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoCategorias.resx">
+      <DependentUpon>ListadoCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoPeliculas.resx">
+      <DependentUpon>ListadoPeliculas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoPlanes.resx">
+      <DependentUpon>ListadoPlanes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoUsuarios.resx">
+      <DependentUpon>ListadoUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevaCategoria.resx">
+      <DependentUpon>NuevaCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevaPelicula.resx">
+      <DependentUpon>NuevaPelicula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevoPlan.resx">
+      <DependentUpon>NuevoPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevoUsuario.resx">
+      <DependentUpon>NuevoUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
