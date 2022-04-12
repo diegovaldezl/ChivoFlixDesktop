@@ -211,19 +211,20 @@
     <Compile Include="Menu.designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20220411004702_init.cs" />
-    <Compile Include="Migrations\20220411004702_init.designer.cs">
-      <DependentUpon>20220411004702_init.cs</DependentUpon>
+    <Compile Include="Migrations\20220412032454_Init.cs" />
+    <Compile Include="Migrations\20220412032454_Init.designer.cs">
+      <DependentUpon>20220412032454_Init.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\masterContextModelSnapshot.cs" />
-    <Compile Include="Model\Generos.cs" />
-    <Compile Include="Model\Listado.cs" />
-    <Compile Include="Model\masterContext.cs" />
-    <Compile Include="Model\Peliculas.cs" />
-    <Compile Include="Model\Planes.cs" />
-    <Compile Include="Model\Roles.cs" />
-    <Compile Include="Model\Tarjetas.cs" />
-    <Compile Include="Model\Usuarios.cs" />
+    <Compile Include="Migrations\CHIVOFLIXContextModelSnapshot.cs" />
+    <Compile Include="Models\CHIVOFLIXContext.cs" />
+    <Compile Include="Models\DuracionPlanes.cs" />
+    <Compile Include="Models\Facturaciones.cs" />
+    <Compile Include="Models\Generos.cs" />
+    <Compile Include="Models\Listados.cs" />
+    <Compile Include="Models\Peliculas.cs" />
+    <Compile Include="Models\Planes.cs" />
+    <Compile Include="Models\Roles.cs" />
+    <Compile Include="Models\Usuarios.cs" />
     <Compile Include="NuevaCategoria.cs">
       <SubType>Form</SubType>
     </Compile>

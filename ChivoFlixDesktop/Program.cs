@@ -1,4 +1,4 @@
-﻿using ChivoFlixDesktop.Model;
+﻿using ChivoFlixDesktop.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Windows.Forms;
@@ -13,7 +13,7 @@ namespace ChivoFlixDesktop
         [STAThread]
         static void Main()
         {
-            masterContext context = new masterContext();
+            CHIVOFLIXContext context = new CHIVOFLIXContext();
             Conexion obj1 = new Conexion();
             if (context.Database.ProviderName != "Microsoft.EntityFrameworkCore.InMemory")
             {

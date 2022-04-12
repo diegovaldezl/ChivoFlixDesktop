@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ChivoFlixDesktop.Model
+namespace ChivoFlixDesktop.Models
 {
-    public partial class Listado
+    public partial class Listados
     {
         public int IdListado { get; set; }
         public int IdPeliculas { get; set; }
