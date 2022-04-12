@@ -2,7 +2,6 @@ C:\Users\Diego\Documents\gitRepos\ChivoFlixDesktop\ChivoFlixDesktop\bin\Debug\Ch
 C:\Users\Diego\Documents\gitRepos\ChivoFlixDesktop\ChivoFlixDesktop\bin\Debug\ChivoFlixDesktop.exe
 C:\Users\Diego\Documents\gitRepos\ChivoFlixDesktop\ChivoFlixDesktop\bin\Debug\ChivoFlixDesktop.pdb
 C:\Users\Diego\Documents\gitRepos\ChivoFlixDesktop\ChivoFlixDesktop\obj\Debug\ChivoFlixDesktop.csproj.AssemblyReference.cache
-C:\Users\Diego\Documents\gitRepos\ChivoFlixDesktop\ChivoFlixDesktop\obj\Debug\ChivoFlixDesktop.Form1.resources
 C:\Users\Diego\Documents\gitRepos\ChivoFlixDesktop\ChivoFlixDesktop\obj\Debug\ChivoFlixDesktop.Properties.Resources.resources
 C:\Users\Diego\Documents\gitRepos\ChivoFlixDesktop\ChivoFlixDesktop\obj\Debug\ChivoFlixDesktop.csproj.GenerateResource.cache
 C:\Users\Diego\Documents\gitRepos\ChivoFlixDesktop\ChivoFlixDesktop\obj\Debug\ChivoFlixDesktop.csproj.CoreCompileInputs.cache
@@ -195,3 +194,13 @@ E:\Repositorio\ChivoFlixDesktop\ChivoFlixDesktop\obj\Debug\ChivoFlixDesktop.Nuev
 E:\Repositorio\ChivoFlixDesktop\ChivoFlixDesktop\obj\Debug\ChivoFlixDesktop.NuevoPlan.resources
 E:\Repositorio\ChivoFlixDesktop\ChivoFlixDesktop\obj\Debug\ChivoFlixDesktop.NuevoUsuario.resources
 E:\Repositorio\ChivoFlixDesktop\ChivoFlixDesktop\obj\Debug\ChivoFlixDesktop.csproj.CopyComplete
+C:\Users\Diego\Documents\gitRepos\ChivoFlixDesktop\ChivoFlixDesktop\obj\Debug\ChivoFlixDesktop.Facturacion.resources
+C:\Users\Diego\Documents\gitRepos\ChivoFlixDesktop\ChivoFlixDesktop\obj\Debug\ChivoFlixDesktop.ListadoCategorias.resources
+C:\Users\Diego\Documents\gitRepos\ChivoFlixDesktop\ChivoFlixDesktop\obj\Debug\ChivoFlixDesktop.ListadoPeliculas.resources
+C:\Users\Diego\Documents\gitRepos\ChivoFlixDesktop\ChivoFlixDesktop\obj\Debug\ChivoFlixDesktop.ListadoPlanes.resources
+C:\Users\Diego\Documents\gitRepos\ChivoFlixDesktop\ChivoFlixDesktop\obj\Debug\ChivoFlixDesktop.ListadoUsuarios.resources
+C:\Users\Diego\Documents\gitRepos\ChivoFlixDesktop\ChivoFlixDesktop\obj\Debug\ChivoFlixDesktop.Menu.resources
+C:\Users\Diego\Documents\gitRepos\ChivoFlixDesktop\ChivoFlixDesktop\obj\Debug\ChivoFlixDesktop.NuevaCategoria.resources
+C:\Users\Diego\Documents\gitRepos\ChivoFlixDesktop\ChivoFlixDesktop\obj\Debug\ChivoFlixDesktop.NuevaPelicula.resources
+C:\Users\Diego\Documents\gitRepos\ChivoFlixDesktop\ChivoFlixDesktop\obj\Debug\ChivoFlixDesktop.NuevoPlan.resources
+C:\Users\Diego\Documents\gitRepos\ChivoFlixDesktop\ChivoFlixDesktop\obj\Debug\ChivoFlixDesktop.NuevoUsuario.resources

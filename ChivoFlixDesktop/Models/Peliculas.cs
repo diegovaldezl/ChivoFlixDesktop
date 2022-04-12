@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ChivoFlixDesktop.Model
+namespace ChivoFlixDesktop.Models
 {
     public partial class Peliculas
     {
         public Peliculas()
         {
-            Listado = new HashSet<Listado>();
+            Listados = new HashSet<Listados>();
         }
 
         public int IdPeliculas { get; set; }
@@ -20,6 +20,6 @@ namespace ChivoFlixDesktop.Model
         public int IdGeneros { get; set; }
 
         public virtual Generos IdGenerosNavigation { get; set; }
-        public virtual ICollection<Listado> Listado { get; set; }
+        public virtual ICollection<Listados> Listados { get; set; }
     }
 }
