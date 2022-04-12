@@ -16,5 +16,18 @@ namespace ChivoFlixDesktop
         {
             InitializeComponent();
         }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            Menu menu = new Menu();
+            Hide();
+            menu.ShowDialog();
+            Close();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

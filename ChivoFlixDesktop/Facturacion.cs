@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ChivoFlixDesktop
 {
-    public partial class Form1 : Form
+    public partial class Facturacion : Form
     {
-        public Form1()
+        public Facturacion()
         {
             InitializeComponent();
         }

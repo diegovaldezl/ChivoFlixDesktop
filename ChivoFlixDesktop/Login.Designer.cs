@@ -29,13 +29,37 @@ namespace ChivoFlixDesktop
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnIngresar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // btnIngresar
+            // 
+            this.btnIngresar.Location = new System.Drawing.Point(184, 71);
+            this.btnIngresar.Name = "btnIngresar";
+            this.btnIngresar.Size = new System.Drawing.Size(184, 65);
+            this.btnIngresar.TabIndex = 0;
+            this.btnIngresar.Text = "Ingresar";
+            this.btnIngresar.UseVisualStyleBackColor = true;
+            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(187, 157);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(181, 57);
+            this.btnSalir.TabIndex = 1;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(480, 268);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnIngresar);
             this.Name = "Login";
             this.Text = "Login";
             this.ResumeLayout(false);
@@ -43,5 +67,8 @@ namespace ChivoFlixDesktop
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnIngresar;
+        private System.Windows.Forms.Button btnSalir;
     }
 }

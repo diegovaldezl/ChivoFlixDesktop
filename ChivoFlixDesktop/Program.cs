@@ -17,7 +17,7 @@ namespace ChivoFlixDesktop
             Conexion obj1 = new Conexion();
             if (context.Database.ProviderName != "Microsoft.EntityFrameworkCore.InMemory")
             {
-                obj1.crearBD();
+                obj1.CrearBD();
                 context.Database.Migrate();
             }
             Application.EnableVisualStyles();
