@@ -11,7 +11,7 @@ namespace ChivoFlixDesktop
 {
     public class Conexion
     {
-        public void crearBD()
+        public void CrearBD()
         {
             string database = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=master; Integrated Security=True;";
             string squery = "CREATE DATABASE CHIVOFLIX";
