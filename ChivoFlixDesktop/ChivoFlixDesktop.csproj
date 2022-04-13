@@ -169,7 +169,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Conexion.cs" />
-    <Compile Include="Data\MetodosCRUD.cs" />
+    <Compile Include="Data\ValidarLogin.cs" />
     <Compile Include="Facturacion.cs">
       <SubType>Form</SubType>
     </Compile>

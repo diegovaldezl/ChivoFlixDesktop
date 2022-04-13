@@ -24,7 +24,7 @@ namespace ChivoFlixDesktop
             string user = txtUsuario.Text;
             string clave = txtClave.Text;
 
-            MetodosCRUD crud = new MetodosCRUD();
+            Data.ValidarLogin crud = new Data.ValidarLogin();
             if (crud.login(user,clave))
             {
                 Menu menu = new Menu();

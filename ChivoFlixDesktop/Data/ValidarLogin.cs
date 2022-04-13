@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace ChivoFlixDesktop.Data
 {
-    class MetodosCRUD
+    class ValidarLogin
     {
         Conexion conexion = new Conexion();
 
@@ -39,7 +39,7 @@ namespace ChivoFlixDesktop.Data
                 cmd = new SqlCommand();
                 cmd.Connection = cnn;
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "select * from usuarios where username = '"+username+"' and password = '"+password+"'";
+                cmd.CommandText = "select * from usuarios where username = '"+username+"' and password = '"+password+"' and idRol = 1";
                 cnn.Open();
                 dr = cmd.ExecuteReader();
                 if (dr.Read())
