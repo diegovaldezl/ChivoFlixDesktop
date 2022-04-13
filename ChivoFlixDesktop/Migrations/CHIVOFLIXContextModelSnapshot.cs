@@ -239,9 +239,9 @@ namespace ChivoFlixDesktop.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("Rol")
+                    b.Property<string>("Rol")
                         .HasColumnName("rol")
-                        .HasColumnType("int");
+                        .HasColumnType("varchar(30)");
 
                     b.HasKey("IdRol")
                         .HasName("PK__roles__3C872F766BA21F45");
