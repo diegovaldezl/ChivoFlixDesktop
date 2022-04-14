@@ -114,6 +114,8 @@ namespace ChivoFlixDesktop
             this.txtClave.Name = "txtClave";
             this.txtClave.Size = new System.Drawing.Size(139, 20);
             this.txtClave.TabIndex = 5;
+            this.txtClave.UseSystemPasswordChar = true;
+            this.txtClave.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtClave_KeyPress);
             // 
             // label2
             // 

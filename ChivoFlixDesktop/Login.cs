@@ -21,11 +21,21 @@ namespace ChivoFlixDesktop
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
+            Ingresar();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void Ingresar()
+        {
             string user = txtUsuario.Text;
             string clave = txtClave.Text;
 
             Data.ValidarLogin crud = new Data.ValidarLogin();
-            if (crud.login(user,clave))
+            if (crud.login(user, clave))
             {
                 Menu menu = new Menu();
                 Hide();
@@ -38,9 +48,13 @@ namespace ChivoFlixDesktop
             }
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void txtClave_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Close();
+            if(e.KeyChar == (char)(Keys.Enter))
+            {
+                e.Handled = true;
+                Ingresar();
+            }
         }
     }
 }

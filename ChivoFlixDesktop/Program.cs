@@ -17,9 +17,12 @@ namespace ChivoFlixDesktop
             Conexion obj1 = new Conexion();
             if (context.Database.ProviderName != "Microsoft.EntityFrameworkCore.InMemory")
             {
-                obj1.CrearBD();
-                context.Database.Migrate();
-                obj1.insertRoles();
+                if (obj1.CrearBD())
+                {
+                    context.Database.Migrate();
+                    obj1.InsertRoles();
+                    obj1.InsertUsuario();
+                }
             }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

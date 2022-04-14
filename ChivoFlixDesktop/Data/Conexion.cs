@@ -13,7 +13,7 @@ namespace ChivoFlixDesktop
     {
         public string servidor = "DESKTOP-SNEK398";
         private List<string> roles = new List<string>() { "Administrador", "Usuario" };
-        public void CrearBD()
+        public bool CrearBD()
         {
             string database = "Data Source="+servidor+";Initial Catalog=master;Integrated Security=True";
             //string database = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=master; Integrated Security=True;";
@@ -26,10 +26,12 @@ namespace ChivoFlixDesktop
             {
                 cnn.Open();
                 cmd.ExecuteNonQuery();
+                return true;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error al crear la base chivoflix", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
             finally
             {
@@ -40,7 +42,7 @@ namespace ChivoFlixDesktop
             }
         }
 
-        public void insertRoles()
+        public void InsertRoles()
         {
             string cadena = "Data Source=" + servidor + ";Initial Catalog=CHIVOFLIX;Integrated Security=True";
             for(int i = 0; i < roles.Count; i++)
@@ -62,6 +64,28 @@ namespace ChivoFlixDesktop
                 {
                     MessageBox.Show("Error al ingresar los roles");
                 }
+            }
+        }
+
+        public void InsertUsuario()
+        {
+            string cadena = "Data Source=" + servidor + ";Initial Catalog=CHIVOFLIX;Integrated Security=True";
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection(cadena))
+                {
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.Connection = conexion;
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "insert into usuarios(username,email,password,idRol) values('admin','admin@gmail.com','1234',1)";
+                    conexion.Open();
+                    cmd.ExecuteNonQuery();
+                    conexion.Close();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Error al insertar el usuario");
             }
         }
     }
