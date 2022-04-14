@@ -11,8 +11,8 @@ namespace ChivoFlixDesktop
 {
     public class Conexion
     {
-        public string servidor = "DESKTOP-SNEK398";
-        private List<string> roles = new List<string>() { "Administrador", "Usuario" };
+        public string servidor = "localhost\\SQLExpress";
+        private readonly List<string> roles = new List<string>() { "Administrador", "Usuario" };
         public void CrearBD()
         {
             string database = "Data Source="+servidor+";Initial Catalog=master;Integrated Security=True";
@@ -40,7 +40,7 @@ namespace ChivoFlixDesktop
             }
         }
 
-        public void insertRoles()
+        public void InsertRoles()
         {
             string cadena = "Data Source=" + servidor + ";Initial Catalog=CHIVOFLIX;Integrated Security=True";
             for(int i = 0; i < roles.Count; i++)
@@ -49,10 +49,12 @@ namespace ChivoFlixDesktop
                 {
                     using (SqlConnection conexion = new SqlConnection(cadena))
                     {
-                        SqlCommand cmd = new SqlCommand();
-                        cmd.Connection = conexion;
-                        cmd.CommandType = CommandType.Text;
-                        cmd.CommandText = "insert into roles(rol) values('" + roles[i] + "')";
+                        SqlCommand cmd = new SqlCommand
+                        {
+                            Connection = conexion,
+                            CommandType = CommandType.Text,
+                            CommandText = "insert into roles(rol) values('" + roles[i] + "')"
+                        };
                         conexion.Open();
                         cmd.ExecuteNonQuery();
                         conexion.Close();
