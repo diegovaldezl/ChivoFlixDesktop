@@ -247,7 +247,7 @@ namespace ChivoFlixDesktop.Models
 
                 entity.Property(e => e.IdRol).HasColumnName("idRol");
 
-                entity.Property(e => e.Rol).HasColumnName("rol");
+                entity.Property(e => e.Rol).HasColumnName("rol").HasMaxLength(25).IsUnicode(false);
             });
 
             modelBuilder.Entity<Usuarios>(entity =>

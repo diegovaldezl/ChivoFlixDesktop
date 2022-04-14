@@ -19,6 +19,7 @@ namespace ChivoFlixDesktop
             {
                 obj1.CrearBD();
                 context.Database.Migrate();
+                obj1.insertRoles();
             }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

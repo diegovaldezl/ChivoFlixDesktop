@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ChivoFlixDesktop.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,12 +18,24 @@ namespace ChivoFlixDesktop
             InitializeComponent();
         }
 
+
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            Menu menu = new Menu();
-            Hide();
-            menu.ShowDialog();
-            Close();
+            string user = txtUsuario.Text;
+            string clave = txtClave.Text;
+
+            Data.ValidarLogin crud = new Data.ValidarLogin();
+            if (crud.login(user,clave))
+            {
+                Menu menu = new Menu();
+                Hide();
+                menu.ShowDialog();
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("Usuario y/o contraseña invalidos");
+            }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
