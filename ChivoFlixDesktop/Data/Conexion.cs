@@ -13,6 +13,8 @@ namespace ChivoFlixDesktop
     {
         public string servidor = "localhost\\SQLExpress";
         private readonly List<string> roles = new List<string>() { "Administrador", "Usuario" };
+
+       
         public void CrearBD()
         {
             string database = "Data Source="+servidor+";Initial Catalog=master;Integrated Security=True";
@@ -39,6 +41,8 @@ namespace ChivoFlixDesktop
                 }
             }
         }
+
+
 
         public void InsertRoles()
         {
