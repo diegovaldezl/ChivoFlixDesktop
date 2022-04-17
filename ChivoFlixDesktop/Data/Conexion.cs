@@ -11,30 +11,27 @@ namespace ChivoFlixDesktop
 {
     public class Conexion
     {
-         public static string servidor = "localhost\\SQLExpress";
-        public static string cadenaConexion = "Data Source=" + servidor + ";Initial Catalog=CHIVOFLIX;Integrated Security=True";
-
+        public static string servidor = "localhost\\SQLExpress";
+        public static string cadenaMaster = "Data Source=" + servidor + ";Initial Catalog=master;Integrated Security=True";
+        public static string cadenaChivo = "Data Source=" + servidor + ";Initial Catalog=CHIVOFLIX;Integrated Security=True";
         private readonly List<string> roles = new List<string>() { "Administrador", "Usuario" };
-
-
-       
-        public void CrearBD()
+        public bool CrearBD()
         {
-            string database = "Data Source="+servidor+";Initial Catalog=master;Integrated Security=True";
-            //string database = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=master; Integrated Security=True;";
             string squery = "CREATE DATABASE CHIVOFLIX";
 
-            SqlConnection cnn = new SqlConnection(database);
+            SqlConnection cnn = new SqlConnection(cadenaMaster);
             SqlCommand cmd = new SqlCommand(squery, cnn);
 
             try
             {
                 cnn.Open();
                 cmd.ExecuteNonQuery();
+                return true;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error al crear la base chivoflix", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
             finally
             {
@@ -44,8 +41,6 @@ namespace ChivoFlixDesktop
                 }
             }
         }
-
-
 
         public void InsertRoles()
         {
@@ -74,7 +69,29 @@ namespace ChivoFlixDesktop
             }
         }
 
-        
+        public void InsertUsuario()
+        {
+            string cadena = "Data Source=" + servidor + ";Initial Catalog=CHIVOFLIX;Integrated Security=True";
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection(cadena))
+                {
+                    SqlCommand cmd = new SqlCommand
+                    {
+                        Connection = conexion,
+                        CommandType = CommandType.Text,
+                        CommandText = "insert into usuarios(username,email,password,idRol) values('admin','admin@gmail.com','1234',1)"
+                    };
+                    conexion.Open();
+                    cmd.ExecuteNonQuery();
+                    conexion.Close();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Error al insertar el usuario");
+            }
+        }
     }
 
 }

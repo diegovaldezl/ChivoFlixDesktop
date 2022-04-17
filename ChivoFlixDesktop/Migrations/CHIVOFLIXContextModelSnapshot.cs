@@ -270,7 +270,7 @@ namespace ChivoFlixDesktop.Migrations
 
                     b.Property<string>("Imagen")
                         .HasColumnName("imagen")
-                        .HasColumnType("varchar(MAX)")
+                        .HasColumnType("varchar(max)")
                         .IsUnicode(false);
 
                     b.Property<string>("Password")

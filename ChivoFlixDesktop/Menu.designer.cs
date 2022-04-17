@@ -446,7 +446,6 @@ namespace ChivoFlixDesktop
             this.panelFormularios.Name = "panelFormularios";
             this.panelFormularios.Size = new System.Drawing.Size(736, 547);
             this.panelFormularios.TabIndex = 1;
-            this.panelFormularios.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFormularios_Paint);
             // 
             // Menu
             // 

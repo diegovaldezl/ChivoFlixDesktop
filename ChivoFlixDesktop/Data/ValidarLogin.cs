@@ -1,32 +1,30 @@
-﻿using System.Data.SqlClient;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Data;
+using System.Windows.Forms;
 
 namespace ChivoFlixDesktop.Data
 {
     class ValidarLogin
     {
-        readonly Conexion conexion = new Conexion();
-
         SqlConnection cnn;
         SqlCommand cmd;
         SqlDataReader dr;
 
         public bool ConexionBd()
         {
-            using (SqlConnection con = new SqlConnection(Conexion.cadenaConexion))
+            try
             {
-                con.Open();
-
-                try
-                {
-                    
-                    cnn = new SqlConnection(Conexion.cadenaConexion);
-                    return true;
-                }
-                catch
-                {
-                    return false;
-                }
+                cnn = new SqlConnection(Conexion.cadenaChivo);
+                return true;
+            }
+            catch
+            {
+                return false;
             }
         }
         public bool Login(string username, string password)

@@ -1,4 +1,12 @@
-﻿using System;
+﻿using ChivoFlixDesktop.Data;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ChivoFlixDesktop
@@ -42,7 +50,7 @@ namespace ChivoFlixDesktop
 
         private void txtClave_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (char)(Keys.Enter))
+            if(e.KeyChar == (char)(Keys.Enter))
             {
                 e.Handled = true;
                 Ingresar();
