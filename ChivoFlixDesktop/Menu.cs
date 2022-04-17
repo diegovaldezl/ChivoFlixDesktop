@@ -147,5 +147,10 @@ namespace ChivoFlixDesktop
         {
             formularioActive(new Facturacion());
         }
+
+        private void panelFormularios_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
