@@ -11,8 +11,11 @@ namespace ChivoFlixDesktop
 {
     public class Conexion
     {
-        public string servidor = "localhost\\SQLExpress";
+         public static string servidor = "localhost\\SQLExpress";
+        public static string cadenaConexion = "Data Source=" + servidor + ";Initial Catalog=CHIVOFLIX;Integrated Security=True";
+
         private readonly List<string> roles = new List<string>() { "Administrador", "Usuario" };
+
 
        
         public void CrearBD()
@@ -70,6 +73,8 @@ namespace ChivoFlixDesktop
                 }
             }
         }
+
+        
     }
 
 }

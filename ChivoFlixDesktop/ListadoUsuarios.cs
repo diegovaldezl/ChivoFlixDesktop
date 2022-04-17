@@ -8,12 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ChivoFlixDesktop.Data;
 
 namespace ChivoFlixDesktop
 {
     public partial class ListadoUsuarios : Form
     {
+
+
         public ListadoUsuarios()
         {
             InitializeComponent();
@@ -21,9 +22,16 @@ namespace ChivoFlixDesktop
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
-            using (SqlConnection con = new SqlConnection(Conexion.database)) ;
-            SqlCommand commando = new SqlCommand("Select * from usuarios",  );
+            using (SqlConnection con = new SqlConnection(Conexion.cadenaConexion))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("Select * from usuarios",con);
+                SqlDataAdapter adaptador = new SqlDataAdapter();
+                adaptador.SelectCommand = cmd;
+                DataTable tabla = new DataTable();
+                adaptador.Fill(tabla);
+                gvListaUsuarios.DataSource = tabla;
+            }
         }
     }
 }

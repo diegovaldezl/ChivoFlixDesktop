@@ -20,15 +20,20 @@ namespace ChivoFlixDesktop.Data
 
         public bool conexionBd()
         {
-            try
+            using (SqlConnection con = new SqlConnection(Conexion.cadenaConexion))
             {
-                string database = "Data Source=" + conexion.servidor + ";Initial Catalog=CHIVOFLIX;Integrated Security=True";
-                cnn = new SqlConnection(database);
-                return true;
-            }
-            catch
-            {
-                return false;
+                con.Open();
+
+                try
+                {
+                    
+                    cnn = new SqlConnection(Conexion.cadenaConexion);
+                    return true;
+                }
+                catch
+                {
+                    return false;
+                }
             }
         }
         public bool login(string username, string password)
