@@ -168,7 +168,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CHIVOFLIXDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CHIVOFLIXDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Data\Conexion.cs" />
+    <Compile Include="Data\UsuariosDatos.cs" />
     <Compile Include="Data\ValidarLogin.cs" />
     <Compile Include="Facturacion.cs">
       <SubType>Form</SubType>
@@ -294,6 +300,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="CHIVOFLIXDataSet.xsc">
+      <DependentUpon>CHIVOFLIXDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CHIVOFLIXDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CHIVOFLIXDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CHIVOFLIXDataSet.xss">
+      <DependentUpon>CHIVOFLIXDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

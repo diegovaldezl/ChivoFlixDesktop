@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ChivoFlixDesktop.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,49 @@ namespace ChivoFlixDesktop
 {
     public partial class ListadoUsuarios : Form
     {
+        UsuariosDatos usuariosDatos = new UsuariosDatos();
         public ListadoUsuarios()
         {
             InitializeComponent();
         }
+
+        private void ListadoUsuarios_Load(object sender, EventArgs e)
+        {
+            usuariosDatos.selectUsuarios(dgvUsuarios);
+        }
+
+        private void dgvUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(dgvUsuarios.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                dgvUsuarios.CurrentRow.Selected = true;
+                txtUserName.Text = dgvUsuarios.Rows[e.RowIndex].Cells["username"].FormattedValue.ToString();
+                txtPassword.Text = dgvUsuarios.Rows[e.RowIndex].Cells["password"].FormattedValue.ToString();
+                txtEmail.Text = dgvUsuarios.Rows[e.RowIndex].Cells["email"].FormattedValue.ToString();
+            }
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            string usuario = txtUserName.Text;
+            string clave = txtPassword.Text;
+            string email = txtEmail.Text;
+            if(usuariosDatos.updateUsuario(usuario, email, clave, dgvUsuarios)){
+                MessageBox.Show("Usuario Actualizado");
+            }
+            else
+            {
+                MessageBox.Show("Error al actualizar");
+            }
+            limpiarCajas();
+        }
+
+        public void limpiarCajas()
+        {
+            txtEmail.Clear();
+            txtPassword.Clear();
+            txtUserName.Clear();
+        }
     }
+
 }

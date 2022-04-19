@@ -88,6 +88,7 @@ namespace ChivoFlixDesktop
                 MessageBox.Show("Error al insertar el usuario");
             }
         }
+
     }
 
 }
