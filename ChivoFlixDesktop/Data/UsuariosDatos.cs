@@ -46,11 +46,11 @@ namespace ChivoFlixDesktop.Data
             }
             catch (Exception ex)
             {
-                MessageBox.Show("REPORTE NO GENERADO: " + ex.ToString());
+                MessageBox.Show("Intente de nuevo: " + ex.ToString());
             }
         }
 
-        public bool updateUsuario(string user, string email, string clave, DataGridView dgv)
+        public bool updateUsuario(int id,string user, string email, string clave, DataGridView dgv)
         {
             try
             {
@@ -59,7 +59,7 @@ namespace ChivoFlixDesktop.Data
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = cnn;
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "update usuarios set username = '"+user+"',email='"+email+"',password = '"+clave+"' where idRol = 1";
+                    cmd.CommandText = "update usuarios set username = '"+user+"',email='"+email+"',password = '"+clave+ "' where idRol = 1 and idUsuarios = "+id+"";
                     cnn.Open();
                     cmd.ExecuteNonQuery();
                     cnn.Close();
@@ -74,6 +74,78 @@ namespace ChivoFlixDesktop.Data
             catch
             {
                 MessageBox.Show("Error al actualizar");
+                return false;
+            }
+        }
+
+        public bool InsertUsuario(string user, string email, string clave)
+        {
+            try
+            {
+                if (conexionBd())
+                {
+                    cmd = new SqlCommand();
+                    cmd.Connection = cnn;
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "insert into usuarios(username,email,password,idRol) values('" + user + "','" + email + "','" + clave + "',1)";
+                    cnn.Open();
+                    cmd.ExecuteNonQuery();
+                    cnn.Close();
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+            
+        }
+
+        public void selectUsuarios(DataGridView gvd, string usuario)
+        {
+            try
+            {
+                if (conexionBd())
+                {
+                    da = new SqlDataAdapter("select idUsuarios,username,email,password,perfiles,imagen,rol from usuarios inner join roles on usuarios.idRol = roles.idRol where username like '%"+usuario+"%'", cnn);
+                    dt = new DataTable();
+                    da.Fill(dt);
+                    gvd.DataSource = dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Intente de nuevo: " + ex.ToString());
+            }
+        }
+
+        public bool deleteUsuario(DataGridView dataGridView, int id)
+        {
+            try
+            {
+                if (conexionBd())
+                {
+                    cmd = new SqlCommand();
+                    cmd.Connection = cnn;
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "delete usuarios where idUsuarios = "+id+"";
+                    cnn.Open();
+                    cmd.ExecuteNonQuery();
+                    cnn.Close();
+                    selectUsuarios(dataGridView);
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch
+            {
                 return false;
             }
         }
