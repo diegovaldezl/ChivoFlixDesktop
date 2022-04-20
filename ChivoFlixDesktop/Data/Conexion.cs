@@ -11,7 +11,7 @@ namespace ChivoFlixDesktop
 {
     public class Conexion
     {
-        public string servidor = "DESKTOP-SNEK398";
+        public string servidor = "localhost\\SQLEXPRESS";
         private List<string> roles = new List<string>() { "Administrador", "Usuario" };
         public bool CrearBD()
         {
