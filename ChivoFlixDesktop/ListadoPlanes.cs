@@ -16,5 +16,15 @@ namespace ChivoFlixDesktop
         {
             InitializeComponent();
         }
+
+        private void txtPlan_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        public void limpiarCajas()
+        {
+            txtPlann.Clear();
+            txtPrecio.Clear();
+        }
     }
 }
