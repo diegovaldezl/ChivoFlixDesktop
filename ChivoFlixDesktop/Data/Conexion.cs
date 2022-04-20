@@ -11,15 +11,15 @@ namespace ChivoFlixDesktop
 {
     public class Conexion
     {
-        public static string servidor = "localhost\\SQLExpress";
-        public static string cadenaMaster = "Data Source=" + servidor + ";Initial Catalog=master;Integrated Security=True";
-        public static string cadenaChivo = "Data Source=" + servidor + ";Initial Catalog=CHIVOFLIX;Integrated Security=True";
-        private readonly List<string> roles = new List<string>() { "Administrador", "Usuario" };
+        public string servidor = "localhost\\SQLEXPRESS";
+        private List<string> roles = new List<string>() { "Administrador", "Usuario" };
         public bool CrearBD()
         {
+            string database = "Data Source="+servidor+";Initial Catalog=master;Integrated Security=True";
+            //string database = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=master; Integrated Security=True;";
             string squery = "CREATE DATABASE CHIVOFLIX";
 
-            SqlConnection cnn = new SqlConnection(cadenaMaster);
+            SqlConnection cnn = new SqlConnection(database);
             SqlCommand cmd = new SqlCommand(squery, cnn);
 
             try
@@ -51,12 +51,10 @@ namespace ChivoFlixDesktop
                 {
                     using (SqlConnection conexion = new SqlConnection(cadena))
                     {
-                        SqlCommand cmd = new SqlCommand
-                        {
-                            Connection = conexion,
-                            CommandType = CommandType.Text,
-                            CommandText = "insert into roles(rol) values('" + roles[i] + "')"
-                        };
+                        SqlCommand cmd = new SqlCommand();
+                        cmd.Connection = conexion;
+                        cmd.CommandType = CommandType.Text;
+                        cmd.CommandText = "insert into roles(rol) values('" + roles[i] + "')";
                         conexion.Open();
                         cmd.ExecuteNonQuery();
                         conexion.Close();
@@ -76,12 +74,10 @@ namespace ChivoFlixDesktop
             {
                 using (SqlConnection conexion = new SqlConnection(cadena))
                 {
-                    SqlCommand cmd = new SqlCommand
-                    {
-                        Connection = conexion,
-                        CommandType = CommandType.Text,
-                        CommandText = "insert into usuarios(username,email,password,idRol) values('admin','admin@gmail.com','1234',1)"
-                    };
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.Connection = conexion;
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "insert into usuarios(username,email,password,idRol) values('admin','admin@gmail.com','1234',1)";
                     conexion.Open();
                     cmd.ExecuteNonQuery();
                     conexion.Close();
@@ -92,6 +88,7 @@ namespace ChivoFlixDesktop
                 MessageBox.Show("Error al insertar el usuario");
             }
         }
+
     }
 
 }
