@@ -11,19 +11,15 @@ namespace ChivoFlixDesktop.Data
 {
     class ValidarLogin
     {
-        Conexion conexion = new Conexion();
-
         SqlConnection cnn;
         SqlCommand cmd;
         SqlDataReader dr;
-        SqlDataAdapter dt;
 
-        public bool conexionBd()
+        public bool ConexionBd()
         {
             try
             {
-                string database = "Data Source=" + conexion.servidor + ";Initial Catalog=CHIVOFLIX;Integrated Security=True";
-                cnn = new SqlConnection(database);
+                cnn = new SqlConnection(Conexion.cadenaChivo);
                 return true;
             }
             catch
@@ -31,15 +27,17 @@ namespace ChivoFlixDesktop.Data
                 return false;
             }
         }
-        public bool login(string username, string password)
+        public bool Login(string username, string password)
         {
             bool solicitud = false;
-            if (conexionBd())
+            if (ConexionBd())
             {
-                cmd = new SqlCommand();
-                cmd.Connection = cnn;
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "select * from usuarios where username = '"+username+"' and password = '"+password+"' and idRol = 1";
+                cmd = new SqlCommand
+                {
+                    Connection = cnn,
+                    CommandType = CommandType.Text,
+                    CommandText = "select * from usuarios where username = '" + username + "' and password = '" + password + "' and idRol = 1"
+                };
                 cnn.Open();
                 dr = cmd.ExecuteReader();
                 if (dr.Read())
