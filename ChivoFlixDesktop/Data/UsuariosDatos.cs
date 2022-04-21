@@ -25,7 +25,7 @@ namespace ChivoFlixDesktop.Data
                 return false;
             }
         }
-        public void selectUsuarios(DataGridView gvd)
+        public void SelectUsuarios(DataGridView gvd)
         {
             try
             {
@@ -43,7 +43,7 @@ namespace ChivoFlixDesktop.Data
             }
         }
 
-        public bool updateUsuario(int id,string user, string email, string clave, DataGridView dgv)
+        public bool UpdateUsuario(int id,string user, string email, string clave, DataGridView dgv)
         {
             try
             {
@@ -58,7 +58,7 @@ namespace ChivoFlixDesktop.Data
                     cnn.Open();
                     cmd.ExecuteNonQuery();
                     cnn.Close();
-                    selectUsuarios(dgv);
+                    SelectUsuarios(dgv);
                     return true;
                 }
                 else
@@ -102,7 +102,7 @@ namespace ChivoFlixDesktop.Data
             
         }
 
-        public void selectUsuarios(DataGridView gvd, string usuario)
+        public void SelectUsuarios(DataGridView gvd, string usuario)
         {
             try
             {
@@ -120,7 +120,7 @@ namespace ChivoFlixDesktop.Data
             }
         }
 
-        public bool deleteUsuario(DataGridView dataGridView, int id)
+        public bool DeleteUsuario(DataGridView dataGridView, int id)
         {
             try
             {
@@ -135,7 +135,7 @@ namespace ChivoFlixDesktop.Data
                     cnn.Open();
                     cmd.ExecuteNonQuery();
                     cnn.Close();
-                    selectUsuarios(dataGridView);
+                    SelectUsuarios(dataGridView);
                     return true;
                 }
                 else

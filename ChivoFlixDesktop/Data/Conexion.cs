@@ -51,10 +51,12 @@ namespace ChivoFlixDesktop
                 {
                     using (SqlConnection conexion = new SqlConnection(cadena))
                     {
-                        SqlCommand cmd = new SqlCommand();
-                        cmd.Connection = conexion;
-                        cmd.CommandType = CommandType.Text;
-                        cmd.CommandText = "insert into roles(rol) values('" + roles[i] + "')";
+                        SqlCommand cmd = new SqlCommand
+                        {
+                            Connection = conexion,
+                            CommandType = CommandType.Text,
+                            CommandText = "insert into roles(rol) values('" + roles[i] + "')"
+                        };
                         conexion.Open();
                         cmd.ExecuteNonQuery();
                         conexion.Close();
@@ -74,10 +76,12 @@ namespace ChivoFlixDesktop
             {
                 using (SqlConnection conexion = new SqlConnection(cadena))
                 {
-                    SqlCommand cmd = new SqlCommand();
-                    cmd.Connection = conexion;
-                    cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "insert into usuarios(username,email,password,idRol) values('admin','admin@gmail.com','1234',1)";
+                    SqlCommand cmd = new SqlCommand
+                    {
+                        Connection = conexion,
+                        CommandType = CommandType.Text,
+                        CommandText = "insert into usuarios(username,email,password,idRol) values('admin','admin@gmail.com','1234',1)"
+                    };
                     conexion.Open();
                     cmd.ExecuteNonQuery();
                     conexion.Close();

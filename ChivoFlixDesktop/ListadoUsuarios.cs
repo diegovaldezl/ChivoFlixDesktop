@@ -22,7 +22,7 @@ namespace ChivoFlixDesktop
         private void ListadoUsuarios_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'cHIVOFLIXDataSet.usuarios' Puede moverla o quitarla según sea necesario.
-            usuariosDatos.selectUsuarios(dgvUsuarios);
+            usuariosDatos.SelectUsuarios(dgvUsuarios);
         }
 
         private void dgvUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -50,7 +50,7 @@ namespace ChivoFlixDesktop
             string clave = txtPassword.Text;
             string email = txtEmail.Text;
             int id = int.Parse(txtIdUsuario.Text);
-            if (usuariosDatos.updateUsuario(id,usuario, email, clave, dgvUsuarios)){
+            if (usuariosDatos.UpdateUsuario(id,usuario, email, clave, dgvUsuarios)){
                 MessageBox.Show("Usuario Actualizado");
             }
             else
@@ -71,18 +71,18 @@ namespace ChivoFlixDesktop
         {
             NuevoUsuario nuevoUsuario = new NuevoUsuario();
             nuevoUsuario.ShowDialog();
-            usuariosDatos.selectUsuarios(dgvUsuarios);
+            usuariosDatos.SelectUsuarios(dgvUsuarios);
         }
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
         {
-            usuariosDatos.selectUsuarios(dgvUsuarios, txtUsuario.Text);
+            usuariosDatos.SelectUsuarios(dgvUsuarios, txtUsuario.Text);
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             int id = int.Parse(txtIdUsuario.Text);
-            if(usuariosDatos.deleteUsuario(dgvUsuarios, id))
+            if(usuariosDatos.DeleteUsuario(dgvUsuarios, id))
             {
                 limpiarCajas();
                 MessageBox.Show("Usuario Eliminado");
