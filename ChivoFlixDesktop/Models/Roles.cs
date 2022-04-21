@@ -11,7 +11,7 @@ namespace ChivoFlixDesktop.Models
         }
 
         public int IdRol { get; set; }
-        public string Rol { get; set; }
+        public int? Rol { get; set; }
 
         public virtual ICollection<Usuarios> Usuarios { get; set; }
     }

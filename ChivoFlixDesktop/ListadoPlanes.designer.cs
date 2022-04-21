@@ -32,7 +32,7 @@ namespace ChivoFlixDesktop
             this.label1 = new System.Windows.Forms.Label();
             this.txtPlan = new System.Windows.Forms.TextBox();
             this.btnNuevoPlan = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dvgPlanes = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtIdPlan = new System.Windows.Forms.TextBox();
@@ -42,7 +42,7 @@ namespace ChivoFlixDesktop
             this.btnEliminar = new System.Windows.Forms.Button();
             this.txtPlann = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgPlanes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHIVOFLIXDataSet)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,14 +71,16 @@ namespace ChivoFlixDesktop
             this.btnNuevoPlan.TabIndex = 2;
             this.btnNuevoPlan.Text = "Nuevo Plan";
             this.btnNuevoPlan.UseVisualStyleBackColor = true;
+            this.btnNuevoPlan.Click += new System.EventHandler(this.btnNuevoPlan_Click);
             // 
-            // dataGridView1
+            // dvgPlanes
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 75);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(695, 270);
-            this.dataGridView1.TabIndex = 3;
+            this.dvgPlanes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgPlanes.Location = new System.Drawing.Point(13, 75);
+            this.dvgPlanes.Name = "dvgPlanes";
+            this.dvgPlanes.Size = new System.Drawing.Size(695, 270);
+            this.dvgPlanes.TabIndex = 3;
+            this.dvgPlanes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgPlanes_CellClick);
             // 
             // label2
             // 
@@ -126,6 +128,7 @@ namespace ChivoFlixDesktop
             this.btnModificar.TabIndex = 8;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnEliminar
             // 
@@ -135,6 +138,7 @@ namespace ChivoFlixDesktop
             this.btnEliminar.TabIndex = 9;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // txtPlann
             // 
@@ -165,14 +169,15 @@ namespace ChivoFlixDesktop
             this.Controls.Add(this.txtIdPlan);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dvgPlanes);
             this.Controls.Add(this.btnNuevoPlan);
             this.Controls.Add(this.txtPlan);
             this.Controls.Add(this.label1);
             this.MinimumSize = new System.Drawing.Size(736, 547);
             this.Name = "ListadoPlanes";
             this.Text = "ListadoPlanes";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.ListadoUsuarios_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dvgPlanes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHIVOFLIXDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -184,7 +189,7 @@ namespace ChivoFlixDesktop
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtPlan;
         private System.Windows.Forms.Button btnNuevoPlan;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dvgPlanes;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtIdPlan;

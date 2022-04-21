@@ -17,7 +17,7 @@ namespace ChivoFlixDesktop.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK__duracion__812FA85D5C9C4FEC", x => x.idDuracionPlanes);
+                    table.PrimaryKey("PK__duracion__812FA85D4DDDD2A5", x => x.idDuracionPlanes);
                 });
 
             migrationBuilder.CreateTable(
@@ -30,7 +30,7 @@ namespace ChivoFlixDesktop.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK__generos__525F69B89698BFBB", x => x.idGeneros);
+                    table.PrimaryKey("PK__generos__525F69B817391CE1", x => x.idGeneros);
                 });
 
             migrationBuilder.CreateTable(
@@ -39,11 +39,11 @@ namespace ChivoFlixDesktop.Migrations
                 {
                     idRol = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    rol = table.Column<string>(unicode: false, maxLength: 25,nullable: true)
+                    rol = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK__roles__3C872F766BA21F45", x => x.idRol);
+                    table.PrimaryKey("PK__roles__3C872F76AB588757", x => x.idRol);
                 });
 
             migrationBuilder.CreateTable(
@@ -52,6 +52,7 @@ namespace ChivoFlixDesktop.Migrations
                 {
                     idPeliculas = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    nombre = table.Column<string>(unicode: false, maxLength: 500, nullable: false),
                     anioEstreno = table.Column<int>(nullable: false),
                     categoriaEdad = table.Column<string>(unicode: false, maxLength: 3, nullable: false),
                     descripcion = table.Column<string>(unicode: false, maxLength: 500, nullable: false),
@@ -62,7 +63,7 @@ namespace ChivoFlixDesktop.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK__pelicula__71DB443FC4F322C9", x => x.idPeliculas);
+                    table.PrimaryKey("PK__pelicula__71DB443F16B1CBF9", x => x.idPeliculas);
                     table.ForeignKey(
                         name: "fk_Peliculas_Generos",
                         column: x => x.idGeneros,
@@ -86,7 +87,7 @@ namespace ChivoFlixDesktop.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK__usuarios__3940559A97851C3F", x => x.idUsuarios);
+                    table.PrimaryKey("PK__usuarios__3940559A7C6EFA46", x => x.idUsuarios);
                     table.ForeignKey(
                         name: "fk_Usuarios_Roles",
                         column: x => x.idRol,
@@ -106,7 +107,7 @@ namespace ChivoFlixDesktop.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK__listados__EEA3B4656600FBF7", x => x.idListado);
+                    table.PrimaryKey("PK__listados__EEA3B4650814573D", x => x.idListado);
                     table.ForeignKey(
                         name: "fk_Listado_Peliculas",
                         column: x => x.idPeliculas,
@@ -125,7 +126,8 @@ namespace ChivoFlixDesktop.Migrations
                 name: "planes",
                 columns: table => new
                 {
-                    idPlanes = table.Column<int>(nullable: false),
+                    idPlanes = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     plann = table.Column<string>(unicode: false, maxLength: 15, nullable: false),
                     precioPlan = table.Column<double>(nullable: false),
                     idDuracionPlanes = table.Column<int>(nullable: false),
@@ -133,7 +135,7 @@ namespace ChivoFlixDesktop.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK__planes__31C4681EE8F4D2A7", x => x.idPlanes);
+                    table.PrimaryKey("PK__planes__31C4681E538E7E4D", x => x.idPlanes);
                     table.ForeignKey(
                         name: "fk_Planes_DuracionP",
                         column: x => x.idDuracionPlanes,
@@ -164,7 +166,7 @@ namespace ChivoFlixDesktop.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK__facturac__85C535F2CEB63A25", x => x.idFacturaciones);
+                    table.PrimaryKey("PK__facturac__85C535F2A8D79B67", x => x.idFacturaciones);
                     table.ForeignKey(
                         name: "fk_Facuraciones_Planes",
                         column: x => x.idPlanes,
