@@ -11,6 +11,7 @@ namespace ChivoFlixDesktop.Models
         }
 
         public int IdPeliculas { get; set; }
+        public string Nombre { get; set; }
         public int AnioEstreno { get; set; }
         public string CategoriaEdad { get; set; }
         public string Descripcion { get; set; }

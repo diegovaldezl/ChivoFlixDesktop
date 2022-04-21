@@ -5,11 +5,10 @@ using System.Windows.Forms;
 
 namespace ChivoFlixDesktop.Data
 {
-    class UsuariosDatos
+    class CategoriaDatos
     {
         SqlConnection cnn;
         SqlCommand cmd;
-        SqlDataReader dr;
         SqlDataAdapter da;
         DataTable dt;
 
@@ -25,13 +24,13 @@ namespace ChivoFlixDesktop.Data
                 return false;
             }
         }
-        public void selectUsuarios(DataGridView gvd)
+        public void SelectCategorias(DataGridView gvd)
         {
             try
             {
                 if (ConexionBd())
                 {
-                    da = new SqlDataAdapter("select idUsuarios,username,email,password,perfiles,imagen,rol from usuarios inner join roles on usuarios.idRol = roles.idRol", cnn);
+                    da = new SqlDataAdapter("select * from generos", cnn);
                     dt = new DataTable();
                     da.Fill(dt);
                     gvd.DataSource = dt;
@@ -42,8 +41,24 @@ namespace ChivoFlixDesktop.Data
                 MessageBox.Show("Intente de nuevo: " + ex.ToString());
             }
         }
-
-        public bool updateUsuario(int id,string user, string email, string clave, DataGridView dgv)
+        public void SelectCategorias(DataGridView gvd, string nombre)
+        {
+            try
+            {
+                if (ConexionBd())
+                {
+                    da = new SqlDataAdapter("select * from generos where nombre like '%" + nombre + "%'", cnn);
+                    dt = new DataTable();
+                    da.Fill(dt);
+                    gvd.DataSource = dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Intente de nuevo: " + ex.ToString());
+            }
+        }
+        public bool UpdateCategorias(int id, string nombre, DataGridView dgv)
         {
             try
             {
@@ -53,12 +68,12 @@ namespace ChivoFlixDesktop.Data
                     {
                         Connection = cnn,
                         CommandType = CommandType.Text,
-                        CommandText = "update usuarios set username = '" + user + "',email='" + email + "',password = '" + clave + "' where idRol = 1 and idUsuarios = " + id + ""
+                        CommandText = "update generos set nombre = '" + nombre + "' where idGeneros = " + id
                     };
                     cnn.Open();
                     cmd.ExecuteNonQuery();
                     cnn.Close();
-                    selectUsuarios(dgv);
+                    SelectCategorias(dgv);
                     return true;
                 }
                 else
@@ -72,8 +87,7 @@ namespace ChivoFlixDesktop.Data
                 return false;
             }
         }
-
-        public bool InsertUsuario(string user, string email, string clave)
+        public bool DeleteCategoria(DataGridView dataGridView, int id)
         {
             try
             {
@@ -83,7 +97,35 @@ namespace ChivoFlixDesktop.Data
                     {
                         Connection = cnn,
                         CommandType = CommandType.Text,
-                        CommandText = "insert into usuarios(username,email,password,idRol) values('" + user + "','" + email + "','" + clave + "',1)"
+                        CommandText = "delete generos where idGeneros = " + id
+                    };
+                    cnn.Open();
+                    cmd.ExecuteNonQuery();
+                    cnn.Close();
+                    SelectCategorias(dataGridView);
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public bool InsertCategria(string nombre)
+        {
+            try
+            {
+                if (ConexionBd())
+                {
+                    cmd = new SqlCommand
+                    {
+                        Connection = cnn,
+                        CommandType = CommandType.Text,
+                        CommandText = "insert into generos(nombre) values('" + nombre + "')"
                     };
                     cnn.Open();
                     cmd.ExecuteNonQuery();
@@ -99,54 +141,7 @@ namespace ChivoFlixDesktop.Data
             {
                 return false;
             }
-            
-        }
 
-        public void selectUsuarios(DataGridView gvd, string usuario)
-        {
-            try
-            {
-                if (ConexionBd())
-                {
-                    da = new SqlDataAdapter("select idUsuarios,username,email,password,perfiles,imagen,rol from usuarios inner join roles on usuarios.idRol = roles.idRol where username like '%"+usuario+"%'", cnn);
-                    dt = new DataTable();
-                    da.Fill(dt);
-                    gvd.DataSource = dt;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Intente de nuevo: " + ex.ToString());
-            }
-        }
-
-        public bool deleteUsuario(DataGridView dataGridView, int id)
-        {
-            try
-            {
-                if (ConexionBd())
-                {
-                    cmd = new SqlCommand
-                    {
-                        Connection = cnn,
-                        CommandType = CommandType.Text,
-                        CommandText = "delete usuarios where idUsuarios = " + id + ""
-                    };
-                    cnn.Open();
-                    cmd.ExecuteNonQuery();
-                    cnn.Close();
-                    selectUsuarios(dataGridView);
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            catch
-            {
-                return false;
-            }
         }
     }
 }

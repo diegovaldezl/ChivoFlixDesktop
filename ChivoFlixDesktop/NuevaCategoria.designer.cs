@@ -29,20 +29,70 @@ namespace ChivoFlixDesktop
         /// </summary>
         private void InitializeComponent()
         {
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnIngresar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(80, 53);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(52, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Categoria";
+            // 
+            // btnIngresar
+            // 
+            this.btnIngresar.Location = new System.Drawing.Point(64, 135);
+            this.btnIngresar.Name = "btnIngresar";
+            this.btnIngresar.Size = new System.Drawing.Size(75, 23);
+            this.btnIngresar.TabIndex = 1;
+            this.btnIngresar.Text = "Ingresar";
+            this.btnIngresar.UseVisualStyleBackColor = true;
+            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(172, 135);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 2;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(147, 50);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.TabIndex = 3;
             // 
             // NuevaCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(720, 508);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnIngresar);
+            this.Controls.Add(this.label1);
             this.MinimumSize = new System.Drawing.Size(736, 547);
             this.Name = "NuevaCategoria";
             this.Text = "NuevaCategoria";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnIngresar;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.TextBox txtNombre;
     }
 }

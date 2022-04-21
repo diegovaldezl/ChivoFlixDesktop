@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ChivoFlixDesktop.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,97 @@ namespace ChivoFlixDesktop
 {
     public partial class ListadoPeliculas : Form
     {
+        PeliculaDatos peliculaDatos = new PeliculaDatos();
         public ListadoPeliculas()
         {
             InitializeComponent();
+        }
+        private void ListadoPeliculas_Load(object sender, EventArgs e)
+        {
+            peliculaDatos.SelectPeliculas(dgvPeliculas);
+        }
+
+        private void btnNueva_Click(object sender, EventArgs e)
+        {
+            NuevaPelicula nuevaPelicula = new NuevaPelicula();
+            nuevaPelicula.ShowDialog();
+            peliculaDatos.SelectPeliculas(dgvPeliculas);
+        }
+        private void dgvPeliculas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (dgvPeliculas.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+                {
+                    dgvPeliculas.CurrentRow.Selected = true;
+                    txtAnio.Text = dgvPeliculas.Rows[e.RowIndex].Cells["anioEstreno"].FormattedValue.ToString();
+                    txtBanner.Text = dgvPeliculas.Rows[e.RowIndex].Cells["banner"].FormattedValue.ToString();
+                    txtCalidad.Text = dgvPeliculas.Rows[e.RowIndex].Cells["calidad"].FormattedValue.ToString();
+                    txtDescripcion.Text = dgvPeliculas.Rows[e.RowIndex].Cells["descripcion"].FormattedValue.ToString();
+                    txtDirector.Text = dgvPeliculas.Rows[e.RowIndex].Cells["director"].FormattedValue.ToString();
+                    txtEdad.Text = dgvPeliculas.Rows[e.RowIndex].Cells["categoriaEdad"].FormattedValue.ToString();
+                    txtIdPelicula.Text = dgvPeliculas.Rows[e.RowIndex].Cells["idPeliculas"].FormattedValue.ToString();
+                    txtNombre.Text = dgvPeliculas.Rows[e.RowIndex].Cells["nombre"].FormattedValue.ToString();
+                    txtGenero.Text = dgvPeliculas.Rows[e.RowIndex].Cells["idGeneros"].FormattedValue.ToString();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Seleccione una celda valida");
+            }
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(txtIdPelicula.Text);
+            int anio = int.Parse(txtAnio.Text);
+            string nombre = txtNombre.Text;
+            string categoria = txtEdad.Text;
+            string desc = txtDescripcion.Text;
+            string calidad = txtCalidad.Text;
+            string director = txtDirector.Text;
+            string banner = txtBanner.Text;
+            int genero = int.Parse(txtGenero.Text);
+            if (peliculaDatos.UpdatePeliculas(id, anio, nombre, categoria, desc, calidad, director, banner, genero, dgvPeliculas))
+            {
+                MessageBox.Show("Pelicula Actualizada");
+                LimpiarCajas();
+            }
+            else
+            {
+                MessageBox.Show("Error al actualizar");
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(txtIdPelicula.Text);
+            if (peliculaDatos.DeletePelicula(dgvPeliculas, id))
+            {
+                LimpiarCajas();
+                MessageBox.Show("Pelicula Eliminada");
+            }
+            else
+            {
+                MessageBox.Show("Error al eliminar la pelicula");
+            }
+        }
+        public void LimpiarCajas()
+        {
+            txtIdPelicula.Clear();
+            txtAnio.Clear();
+            txtBanner.Clear();
+            txtCalidad.Clear();
+            txtDescripcion.Clear();
+            txtDirector.Clear();
+            txtEdad.Clear();
+            txtNombre.Clear();
+            txtGenero.Clear();
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            peliculaDatos.SelectPeliculas(dgvPeliculas, txtNombre.Text);
         }
     }
 }

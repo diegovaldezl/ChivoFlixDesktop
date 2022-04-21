@@ -35,7 +35,7 @@ namespace ChivoFlixDesktop.Migrations
                         .IsUnicode(false);
 
                     b.HasKey("IdDuracionPlanes")
-                        .HasName("PK__duracion__812FA85D5C9C4FEC");
+                        .HasName("PK__duracion__812FA85D4DDDD2A5");
 
                     b.ToTable("duracionPlanes");
                 });
@@ -83,7 +83,7 @@ namespace ChivoFlixDesktop.Migrations
                         .HasColumnType("float");
 
                     b.HasKey("IdFacturaciones")
-                        .HasName("PK__facturac__85C535F2CEB63A25");
+                        .HasName("PK__facturac__85C535F2A8D79B67");
 
                     b.HasIndex("IdPlanes");
 
@@ -107,7 +107,7 @@ namespace ChivoFlixDesktop.Migrations
                         .IsUnicode(false);
 
                     b.HasKey("IdGeneros")
-                        .HasName("PK__generos__525F69B89698BFBB");
+                        .HasName("PK__generos__525F69B817391CE1");
 
                     b.ToTable("generos");
                 });
@@ -129,7 +129,7 @@ namespace ChivoFlixDesktop.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("IdListado")
-                        .HasName("PK__listados__EEA3B4656600FBF7");
+                        .HasName("PK__listados__EEA3B4650814573D");
 
                     b.HasIndex("IdPeliculas");
 
@@ -188,8 +188,15 @@ namespace ChivoFlixDesktop.Migrations
                         .HasColumnName("idGeneros")
                         .HasColumnType("int");
 
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnName("nombre")
+                        .HasColumnType("varchar(500)")
+                        .HasMaxLength(500)
+                        .IsUnicode(false);
+
                     b.HasKey("IdPeliculas")
-                        .HasName("PK__pelicula__71DB443FC4F322C9");
+                        .HasName("PK__pelicula__71DB443F16B1CBF9");
 
                     b.HasIndex("IdGeneros");
 
@@ -199,8 +206,10 @@ namespace ChivoFlixDesktop.Migrations
             modelBuilder.Entity("ChivoFlixDesktop.Models.Planes", b =>
                 {
                     b.Property<int>("IdPlanes")
+                        .ValueGeneratedOnAdd()
                         .HasColumnName("idPlanes")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int>("IdDuracionPlanes")
                         .HasColumnName("idDuracionPlanes")
@@ -222,7 +231,7 @@ namespace ChivoFlixDesktop.Migrations
                         .HasColumnType("float");
 
                     b.HasKey("IdPlanes")
-                        .HasName("PK__planes__31C4681EE8F4D2A7");
+                        .HasName("PK__planes__31C4681E538E7E4D");
 
                     b.HasIndex("IdDuracionPlanes");
 
@@ -239,12 +248,12 @@ namespace ChivoFlixDesktop.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Rol")
+                    b.Property<int?>("Rol")
                         .HasColumnName("rol")
-                        .HasColumnType("varchar(30)");
+                        .HasColumnType("int");
 
                     b.HasKey("IdRol")
-                        .HasName("PK__roles__3C872F766BA21F45");
+                        .HasName("PK__roles__3C872F76AB588757");
 
                     b.ToTable("roles");
                 });
@@ -292,7 +301,7 @@ namespace ChivoFlixDesktop.Migrations
                         .IsUnicode(false);
 
                     b.HasKey("IdUsuarios")
-                        .HasName("PK__usuarios__3940559A97851C3F");
+                        .HasName("PK__usuarios__3940559A7C6EFA46");
 
                     b.HasIndex("IdRol");
 

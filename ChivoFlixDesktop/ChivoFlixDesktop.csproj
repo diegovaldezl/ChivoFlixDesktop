@@ -173,7 +173,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CHIVOFLIXDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Data\CategoriaDatos.cs" />
     <Compile Include="Data\Conexion.cs" />
+    <Compile Include="Data\PeliculaDatos.cs" />
+    <Compile Include="Data\PlanesDatos.cs" />
     <Compile Include="Data\UsuariosDatos.cs" />
     <Compile Include="Data\ValidarLogin.cs" />
     <Compile Include="Facturacion.cs">
@@ -218,9 +221,9 @@
     <Compile Include="Menu.designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20220412032454_Init.cs" />
-    <Compile Include="Migrations\20220412032454_Init.designer.cs">
-      <DependentUpon>20220412032454_Init.cs</DependentUpon>
+    <Compile Include="Migrations\20220421053318_Init.cs" />
+    <Compile Include="Migrations\20220421053318_Init.designer.cs">
+      <DependentUpon>20220421053318_Init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\CHIVOFLIXContextModelSnapshot.cs" />
     <Compile Include="Models\CHIVOFLIXContext.cs" />

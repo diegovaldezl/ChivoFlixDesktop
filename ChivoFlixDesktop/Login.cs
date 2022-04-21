@@ -35,7 +35,7 @@ namespace ChivoFlixDesktop
             string clave = txtClave.Text;
 
             Data.ValidarLogin crud = new Data.ValidarLogin();
-            if (crud.login(user, clave))
+            if (crud.Login(user, clave))
             {
                 Menu menu = new Menu();
                 Hide();
