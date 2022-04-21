@@ -92,6 +92,11 @@ namespace ChivoFlixDesktop
                 MessageBox.Show("Error al eliminar el usuario");
             }
         }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

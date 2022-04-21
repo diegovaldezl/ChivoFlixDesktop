@@ -90,5 +90,10 @@ namespace ChivoFlixDesktop
             nuevoUsuario.ShowDialog();
             planesDatos.SelectPlanes(dvgPlanes);
         }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -43,6 +43,7 @@ namespace ChivoFlixDesktop
             this.btnEliminar = new System.Windows.Forms.Button();
             this.txtIdUsuario = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnReporte = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -169,9 +170,20 @@ namespace ChivoFlixDesktop
             this.label6.TabIndex = 12;
             this.label6.Text = "IdUsuario:";
             // 
+            // btnReporte
+            // 
+            this.btnReporte.Location = new System.Drawing.Point(498, 445);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(75, 23);
+            this.btnReporte.TabIndex = 14;
+            this.btnReporte.Text = "Reporte";
+            this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
+            // 
             // ListadoUsuarios
             // 
             this.ClientSize = new System.Drawing.Size(720, 508);
+            this.Controls.Add(this.btnReporte);
             this.Controls.Add(this.txtIdUsuario);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnEliminar);
@@ -212,5 +224,6 @@ namespace ChivoFlixDesktop
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.TextBox txtIdUsuario;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnReporte;
     }
 }

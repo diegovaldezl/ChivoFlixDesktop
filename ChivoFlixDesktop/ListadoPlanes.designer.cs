@@ -42,6 +42,7 @@ namespace ChivoFlixDesktop
             this.btnEliminar = new System.Windows.Forms.Button();
             this.txtPlann = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnReporte = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dvgPlanes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHIVOFLIXDataSet)).BeginInit();
             this.SuspendLayout();
@@ -122,7 +123,7 @@ namespace ChivoFlixDesktop
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(186, 451);
+            this.btnModificar.Location = new System.Drawing.Point(150, 450);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 8;
@@ -132,7 +133,7 @@ namespace ChivoFlixDesktop
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(424, 450);
+            this.btnEliminar.Location = new System.Drawing.Point(330, 450);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 9;
@@ -156,11 +157,22 @@ namespace ChivoFlixDesktop
             this.label4.TabIndex = 11;
             this.label4.Text = "Plan";
             // 
+            // btnReporte
+            // 
+            this.btnReporte.Location = new System.Drawing.Point(464, 450);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(75, 23);
+            this.btnReporte.TabIndex = 12;
+            this.btnReporte.Text = "Reporte";
+            this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
+            // 
             // ListadoPlanes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(720, 508);
+            this.Controls.Add(this.btnReporte);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtPlann);
             this.Controls.Add(this.btnEliminar);
@@ -199,5 +211,6 @@ namespace ChivoFlixDesktop
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.TextBox txtPlann;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnReporte;
     }
 }

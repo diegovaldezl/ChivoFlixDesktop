@@ -105,5 +105,10 @@ namespace ChivoFlixDesktop
         {
             peliculaDatos.SelectPeliculas(dgvPeliculas, txtNombre.Text);
         }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

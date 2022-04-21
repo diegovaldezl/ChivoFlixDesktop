@@ -85,5 +85,10 @@ namespace ChivoFlixDesktop
         {
             categoriaDatos.SelectCategorias(dgvCategorias, txtNombre.Text);
         }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

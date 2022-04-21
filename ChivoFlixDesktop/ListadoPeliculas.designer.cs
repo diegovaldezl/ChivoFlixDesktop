@@ -53,6 +53,7 @@ namespace ChivoFlixDesktop
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtGenero = new System.Windows.Forms.TextBox();
+            this.btnReporte = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeliculas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -257,11 +258,22 @@ namespace ChivoFlixDesktop
             this.txtGenero.Size = new System.Drawing.Size(100, 20);
             this.txtGenero.TabIndex = 23;
             // 
+            // btnReporte
+            // 
+            this.btnReporte.Location = new System.Drawing.Point(560, 473);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(75, 23);
+            this.btnReporte.TabIndex = 24;
+            this.btnReporte.Text = "Reporte";
+            this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
+            // 
             // ListadoPeliculas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(720, 508);
+            this.Controls.Add(this.btnReporte);
             this.Controls.Add(this.txtGenero);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtBuscar);
@@ -322,5 +334,6 @@ namespace ChivoFlixDesktop
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtGenero;
+        private System.Windows.Forms.Button btnReporte;
     }
 }
