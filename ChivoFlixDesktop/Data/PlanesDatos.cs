@@ -126,8 +126,8 @@ namespace ChivoFlixDesktop.Data
                         Connection = cnn,
                         CommandType = CommandType.Text,
                         //TODO poner identity 1,1 a planes
-                        CommandText = "insert into planes(idPlanes,plann,precioPlan,idDuracionPlanes,idUsuarios) " +
-                                      "values(2,'" + plan + "','" + precio + "','" + duracion + "',1)"
+                        CommandText = "insert into planes(plann,precioPlan,idDuracionPlanes,idUsuarios) " +
+                                      "values('" + plan + "','" + precio + "','" + duracion + "',1)"
                     };
                     cnn.Open();
                     cmd.ExecuteNonQuery();
