@@ -54,12 +54,13 @@ namespace ChivoFlixDesktop
             // 
             // btnGenerar
             // 
-            this.btnGenerar.Location = new System.Drawing.Point(310, 397);
+            this.btnGenerar.Location = new System.Drawing.Point(282, 397);
             this.btnGenerar.Name = "btnGenerar";
-            this.btnGenerar.Size = new System.Drawing.Size(75, 23);
+            this.btnGenerar.Size = new System.Drawing.Size(113, 23);
             this.btnGenerar.TabIndex = 2;
             this.btnGenerar.Text = "Generar Report";
             this.btnGenerar.UseVisualStyleBackColor = true;
+            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
             // 
             // Facturacion
             // 
