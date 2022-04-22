@@ -182,6 +182,7 @@
     </Compile>
     <Compile Include="Data\CategoriaDatos.cs" />
     <Compile Include="Data\Conexion.cs" />
+    <Compile Include="Data\FacturacionDatos.cs" />
     <Compile Include="Data\PeliculaDatos.cs" />
     <Compile Include="Data\PlanesDatos.cs" />
     <Compile Include="Data\UsuariosDatos.cs" />
@@ -268,6 +269,66 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReporteCategorias.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteCategorias.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReporteFacturaciones.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteFacturaciones.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportePeliculas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportePeliculas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportePlanes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportePlanes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteCategorias.Designer.cs">
+      <DependentUpon>ReporteCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteFacturaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteFacturaciones.Designer.cs">
+      <DependentUpon>ReporteFacturaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReportePeliculas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReportePeliculas.Designer.cs">
+      <DependentUpon>ReportePeliculas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReportePlanes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReportePlanes.Designer.cs">
+      <DependentUpon>ReportePlanes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteUsuarios.Designer.cs">
+      <DependentUpon>ReporteUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteUsuarios.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteUsuarios.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="Facturacion.resx">
       <DependentUpon>Facturacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -310,6 +371,41 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReporteCategorias.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteCategorias.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteFacturaciones.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteFacturaciones.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportePeliculas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportePeliculas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportePlanes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportePlanes.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteCategorias.resx">
+      <DependentUpon>ReporteCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteFacturaciones.resx">
+      <DependentUpon>ReporteFacturaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReportePeliculas.resx">
+      <DependentUpon>ReportePeliculas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReportePlanes.resx">
+      <DependentUpon>ReportePlanes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteUsuarios.resx">
+      <DependentUpon>ReporteUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteUsuarios.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteUsuarios.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="CHIVOFLIXDataSet.xsc">
       <DependentUpon>CHIVOFLIXDataSet.xsd</DependentUpon>
     </None>
@@ -339,9 +435,7 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Reportes\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

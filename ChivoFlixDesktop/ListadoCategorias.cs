@@ -88,7 +88,8 @@ namespace ChivoFlixDesktop
 
         private void btnReporte_Click(object sender, EventArgs e)
         {
-
+            Reportes.ReporteCategorias reporte = new Reportes.ReporteCategorias();
+            reporte.ShowDialog();
         }
     }
 }
