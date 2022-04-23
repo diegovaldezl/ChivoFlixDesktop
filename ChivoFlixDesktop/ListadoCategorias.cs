@@ -91,5 +91,10 @@ namespace ChivoFlixDesktop
             Reportes.ReporteCategorias reporte = new Reportes.ReporteCategorias();
             reporte.ShowDialog();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
