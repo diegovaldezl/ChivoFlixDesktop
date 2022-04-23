@@ -229,9 +229,9 @@
     <Compile Include="Menu.designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20220421053318_Init.cs" />
-    <Compile Include="Migrations\20220421053318_Init.designer.cs">
-      <DependentUpon>20220421053318_Init.cs</DependentUpon>
+    <Compile Include="Migrations\20220423023744_Init.cs" />
+    <Compile Include="Migrations\20220423023744_Init.designer.cs">
+      <DependentUpon>20220423023744_Init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\CHIVOFLIXContextModelSnapshot.cs" />
     <Compile Include="Models\CHIVOFLIXContext.cs" />

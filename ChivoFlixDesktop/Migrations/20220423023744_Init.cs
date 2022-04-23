@@ -39,7 +39,7 @@ namespace ChivoFlixDesktop.Migrations
                 {
                     idRol = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    rol = table.Column<int>(nullable: true)
+                    rol = table.Column<string>(unicode: false, maxLength: 20, nullable: true)
                 },
                 constraints: table =>
                 {
