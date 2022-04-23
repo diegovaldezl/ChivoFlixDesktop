@@ -227,3 +227,4 @@ C:\Users\Diego\Documents\gitRepos\ChivoFlixDesktop\ChivoFlixDesktop\obj\Debug\Ch
 C:\Users\Diego\Documents\gitRepos\ChivoFlixDesktop\ChivoFlixDesktop\obj\Debug\ChivoFlixDesktop.Reportes.ReportePeliculas.resources
 C:\Users\Diego\Documents\gitRepos\ChivoFlixDesktop\ChivoFlixDesktop\obj\Debug\ChivoFlixDesktop.Reportes.ReporteCategorias.resources
 C:\Users\Diego\Documents\gitRepos\ChivoFlixDesktop\ChivoFlixDesktop\obj\Debug\ChivoFlixDesktop.Reportes.ReportePlanes.resources
+C:\Users\Diego\Documents\gitRepos\ChivoFlixDesktop\ChivoFlixDesktop\obj\Debug\ChivoFlixDesktop.Reportes.ReporteFacturaciones.resources

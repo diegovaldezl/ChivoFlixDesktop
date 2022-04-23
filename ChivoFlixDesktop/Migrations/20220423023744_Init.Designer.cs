@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ChivoFlixDesktop.Migrations
 {
     [DbContext(typeof(CHIVOFLIXContext))]
-    [Migration("20220421053318_Init")]
+    [Migration("20220423023744_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -250,9 +250,11 @@ namespace ChivoFlixDesktop.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("Rol")
+                    b.Property<string>("Rol")
                         .HasColumnName("rol")
-                        .HasColumnType("int");
+                        .HasColumnType("varchar(20)")
+                        .HasMaxLength(20)
+                        .IsUnicode(false);
 
                     b.HasKey("IdRol")
                         .HasName("PK__roles__3C872F76AB588757");

@@ -29,7 +29,14 @@ namespace ChivoFlixDesktop.Data
             {
                 if (ConexionBd())
                 {
-                    da = new SqlDataAdapter("select * from peliculas inner join generos on peliculas.idGeneros = generos.idGeneros", cnn);
+                    da = new SqlDataAdapter(
+                        "SELECT idPeliculas as Id, peliculas.nombre as Nombre, " +
+                        "anioEstreno as 'Año Estreno', categoriaEdad as Categoria, " +
+                        "descripcion as Descripcion, calidad as Calidad, " +
+                        "director as Director, banner as Portada, " +
+                        "generos.nombre as Genero " +
+                        "FROM peliculas inner join generos on " +
+                        "peliculas.idGeneros = generos.idGeneros", cnn);
                     dt = new DataTable();
                     da.Fill(dt);
                     gvd.DataSource = dt;

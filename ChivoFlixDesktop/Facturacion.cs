@@ -25,7 +25,7 @@ namespace ChivoFlixDesktop
 
         private void btnGenerar_Click(object sender, EventArgs e)
         {
-            Reportes.ReporteCategorias reporte = new Reportes.ReporteCategorias();
+            Reportes.ReporteFacturaciones reporte = new Reportes.ReporteFacturaciones();
             reporte.ShowDialog();
         }
     }

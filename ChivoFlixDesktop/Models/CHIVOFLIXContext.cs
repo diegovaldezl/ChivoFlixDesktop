@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace ChivoFlixDesktop.Models
 {
@@ -27,7 +29,7 @@ namespace ChivoFlixDesktop.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=" + Conexion.cadenaChivo + ";Database=CHIVOFLIX;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=" + Conexion.servidor + ";Database=CHIVOFLIX;Trusted_Connection=True;");
             }
         }
 
@@ -55,6 +57,10 @@ namespace ChivoFlixDesktop.Models
                     .HasName("PK__facturac__85C535F2A8D79B67");
 
                 entity.ToTable("facturaciones");
+
+                entity.HasIndex(e => e.IdPlanes);
+
+                entity.HasIndex(e => e.IdUsuarios);
 
                 entity.Property(e => e.IdFacturaciones).HasColumnName("idFacturaciones");
 
@@ -117,6 +123,10 @@ namespace ChivoFlixDesktop.Models
 
                 entity.ToTable("listados");
 
+                entity.HasIndex(e => e.IdPeliculas);
+
+                entity.HasIndex(e => e.IdUsuarios);
+
                 entity.Property(e => e.IdListado).HasColumnName("idListado");
 
                 entity.Property(e => e.IdPeliculas).HasColumnName("idPeliculas");
@@ -142,6 +152,8 @@ namespace ChivoFlixDesktop.Models
                     .HasName("PK__pelicula__71DB443F16B1CBF9");
 
                 entity.ToTable("peliculas");
+
+                entity.HasIndex(e => e.IdGeneros);
 
                 entity.Property(e => e.IdPeliculas).HasColumnName("idPeliculas");
 
@@ -198,6 +210,10 @@ namespace ChivoFlixDesktop.Models
 
                 entity.ToTable("planes");
 
+                entity.HasIndex(e => e.IdDuracionPlanes);
+
+                entity.HasIndex(e => e.IdUsuarios);
+
                 entity.Property(e => e.IdPlanes).HasColumnName("idPlanes");
 
                 entity.Property(e => e.IdDuracionPlanes).HasColumnName("idDuracionPlanes");
@@ -234,7 +250,10 @@ namespace ChivoFlixDesktop.Models
 
                 entity.Property(e => e.IdRol).HasColumnName("idRol");
 
-                entity.Property(e => e.Rol).HasColumnName("rol");
+                entity.Property(e => e.Rol)
+                    .HasColumnName("rol")
+                    .HasMaxLength(20)
+                    .IsUnicode(false);
             });
 
             modelBuilder.Entity<Usuarios>(entity =>
@@ -243,6 +262,8 @@ namespace ChivoFlixDesktop.Models
                     .HasName("PK__usuarios__3940559A7C6EFA46");
 
                 entity.ToTable("usuarios");
+
+                entity.HasIndex(e => e.IdRol);
 
                 entity.Property(e => e.IdUsuarios).HasColumnName("idUsuarios");
 
