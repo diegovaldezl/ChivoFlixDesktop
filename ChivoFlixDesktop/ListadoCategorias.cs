@@ -83,7 +83,7 @@ namespace ChivoFlixDesktop
 
         private void txtNombreBuscar_TextChanged(object sender, EventArgs e)
         {
-            categoriaDatos.SelectCategorias(dgvCategorias, txtNombre.Text);
+            categoriaDatos.SelectCategorias(dgvCategorias, txtNombreBuscar.Text);
         }
 
         private void btnReporte_Click(object sender, EventArgs e)

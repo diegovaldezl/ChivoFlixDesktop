@@ -104,7 +104,7 @@ namespace ChivoFlixDesktop
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-            peliculaDatos.SelectPeliculas(dgvPeliculas, txtNombre.Text);
+            peliculaDatos.SelectPeliculas(dgvPeliculas, txtBuscar.Text);
         }
 
         private void btnReporte_Click(object sender, EventArgs e)
