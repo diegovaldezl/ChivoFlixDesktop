@@ -30,7 +30,7 @@ namespace ChivoFlixDesktop.Data
             {
                 if (ConexionBd())
                 {
-                    da = new SqlDataAdapter("select idPlanes,plann,precioPlan,planes.idDuracionPlanes,idUsuarios from planes inner join duracionPlanes on planes.idUsuarios = duracionPlanes.idDuracionPlanes", cnn);
+                    da = new SqlDataAdapter("select idPlanes as Id,plann as Nombre,precioPlan as Precio,planes.idDuracionPlanes as 'Duracion Plan',idUsuarios as Usuarios from planes inner join duracionPlanes on planes.idUsuarios = duracionPlanes.idDuracionPlanes", cnn);
                     dt = new DataTable();
                     da.Fill(dt);
                     gvd.DataSource = dt;
@@ -47,7 +47,7 @@ namespace ChivoFlixDesktop.Data
             {
                 if (ConexionBd())
                 {
-                    da = new SqlDataAdapter("select idPlanes,plann,precioPlan,planes.idDuracionPlanes,idUsuarios from planes inner join duracionPlanes on planes.idUsuarios = duracionPlanes.idDuracionPlanes where plann like '%" + plan + "%'", cnn);
+                    da = new SqlDataAdapter("select idPlanes as Id,plann as Nombre,precioPlan as Precio,planes.idDuracionPlanes as 'Duracion Plan',idUsuarios as Usuarios from planes inner join duracionPlanes on planes.idUsuarios = duracionPlanes.idDuracionPlanes where plann like '%" + plan + "%'", cnn);
                     dt = new DataTable();
                     da.Fill(dt);
                     gvd.DataSource = dt;

@@ -38,9 +38,9 @@ namespace ChivoFlixDesktop
                 if (dvgPlanes.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
                 {
                     dvgPlanes.CurrentRow.Selected = true;
-                    txtPlann.Text = dvgPlanes.Rows[e.RowIndex].Cells["plann"].FormattedValue.ToString();
-                    txtPrecio.Text = dvgPlanes.Rows[e.RowIndex].Cells["precioPlan"].FormattedValue.ToString();
-                    txtIdPlan.Text = dvgPlanes.Rows[e.RowIndex].Cells["idPlanes"].FormattedValue.ToString();
+                    txtPlann.Text = dvgPlanes.Rows[e.RowIndex].Cells["Nombre"].FormattedValue.ToString();
+                    txtPrecio.Text = dvgPlanes.Rows[e.RowIndex].Cells["Precio"].FormattedValue.ToString();
+                    txtIdPlan.Text = dvgPlanes.Rows[e.RowIndex].Cells["Id"].FormattedValue.ToString();
                 }
             }
             catch

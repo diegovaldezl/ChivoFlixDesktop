@@ -45,7 +45,7 @@ namespace ChivoFlixDesktop
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(92, 57);
+            this.label1.Location = new System.Drawing.Point(254, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 13);
             this.label1.TabIndex = 0;
@@ -53,7 +53,7 @@ namespace ChivoFlixDesktop
             // 
             // btnIngresar
             // 
-            this.btnIngresar.Location = new System.Drawing.Point(102, 135);
+            this.btnIngresar.Location = new System.Drawing.Point(264, 93);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(75, 23);
             this.btnIngresar.TabIndex = 1;
@@ -63,7 +63,7 @@ namespace ChivoFlixDesktop
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(213, 135);
+            this.btnCancelar.Location = new System.Drawing.Point(375, 93);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 2;
@@ -73,7 +73,7 @@ namespace ChivoFlixDesktop
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(150, 54);
+            this.txtNombre.Location = new System.Drawing.Point(312, 12);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 3;
@@ -83,7 +83,7 @@ namespace ChivoFlixDesktop
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(256, 53);
+            this.pictureBox3.Location = new System.Drawing.Point(418, 11);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(32, 20);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -95,7 +95,7 @@ namespace ChivoFlixDesktop
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(64, 138);
+            this.pictureBox1.Location = new System.Drawing.Point(226, 96);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 20);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -107,7 +107,7 @@ namespace ChivoFlixDesktop
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(292, 136);
+            this.pictureBox2.Location = new System.Drawing.Point(454, 94);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(32, 20);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -118,6 +118,7 @@ namespace ChivoFlixDesktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(720, 508);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);

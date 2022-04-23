@@ -343,6 +343,7 @@ namespace ChivoFlixDesktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(720, 508);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);

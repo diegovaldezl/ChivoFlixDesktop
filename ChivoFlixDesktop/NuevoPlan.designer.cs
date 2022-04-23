@@ -53,7 +53,7 @@ namespace ChivoFlixDesktop
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 24);
+            this.label1.Location = new System.Drawing.Point(196, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 13);
             this.label1.TabIndex = 0;
@@ -62,7 +62,7 @@ namespace ChivoFlixDesktop
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 79);
+            this.label2.Location = new System.Drawing.Point(196, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 13);
             this.label2.TabIndex = 1;
@@ -71,7 +71,7 @@ namespace ChivoFlixDesktop
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 133);
+            this.label3.Location = new System.Drawing.Point(190, 124);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 13);
             this.label3.TabIndex = 2;
@@ -79,28 +79,28 @@ namespace ChivoFlixDesktop
             // 
             // txtPlann
             // 
-            this.txtPlann.Location = new System.Drawing.Point(133, 21);
+            this.txtPlann.Location = new System.Drawing.Point(311, 12);
             this.txtPlann.Name = "txtPlann";
             this.txtPlann.Size = new System.Drawing.Size(100, 20);
             this.txtPlann.TabIndex = 4;
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(133, 76);
+            this.txtPrecio.Location = new System.Drawing.Point(311, 67);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(100, 20);
             this.txtPrecio.TabIndex = 5;
             // 
             // txtDuracionPlan
             // 
-            this.txtDuracionPlan.Location = new System.Drawing.Point(133, 130);
+            this.txtDuracionPlan.Location = new System.Drawing.Point(311, 121);
             this.txtDuracionPlan.Name = "txtDuracionPlan";
             this.txtDuracionPlan.Size = new System.Drawing.Size(100, 20);
             this.txtDuracionPlan.TabIndex = 6;
             // 
             // btnIngresar
             // 
-            this.btnIngresar.Location = new System.Drawing.Point(55, 254);
+            this.btnIngresar.Location = new System.Drawing.Point(233, 245);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(75, 23);
             this.btnIngresar.TabIndex = 7;
@@ -110,7 +110,7 @@ namespace ChivoFlixDesktop
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(158, 254);
+            this.btnCancelar.Location = new System.Drawing.Point(336, 245);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 8;
@@ -123,7 +123,7 @@ namespace ChivoFlixDesktop
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(239, 15);
+            this.pictureBox4.Location = new System.Drawing.Point(417, 6);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(40, 26);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -135,7 +135,7 @@ namespace ChivoFlixDesktop
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(239, 70);
+            this.pictureBox1.Location = new System.Drawing.Point(417, 61);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(40, 26);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -147,7 +147,7 @@ namespace ChivoFlixDesktop
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(239, 130);
+            this.pictureBox2.Location = new System.Drawing.Point(417, 121);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(40, 26);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -159,7 +159,7 @@ namespace ChivoFlixDesktop
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(239, 251);
+            this.pictureBox3.Location = new System.Drawing.Point(417, 242);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(40, 26);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -171,7 +171,7 @@ namespace ChivoFlixDesktop
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(9, 251);
+            this.pictureBox5.Location = new System.Drawing.Point(187, 242);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(40, 26);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -182,7 +182,8 @@ namespace ChivoFlixDesktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(285, 298);
+            this.BackColor = System.Drawing.Color.Gray;
+            this.ClientSize = new System.Drawing.Size(608, 479);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);

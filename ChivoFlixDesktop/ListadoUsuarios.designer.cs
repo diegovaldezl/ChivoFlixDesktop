@@ -254,6 +254,7 @@ namespace ChivoFlixDesktop
             // 
             // ListadoUsuarios
             // 
+            this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(720, 508);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
