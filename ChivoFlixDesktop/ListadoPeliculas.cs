@@ -37,15 +37,15 @@ namespace ChivoFlixDesktop
                 if (dgvPeliculas.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
                 {
                     dgvPeliculas.CurrentRow.Selected = true;
-                    txtAnio.Text = dgvPeliculas.Rows[e.RowIndex].Cells["anioEstreno"].FormattedValue.ToString();
-                    txtBanner.Text = dgvPeliculas.Rows[e.RowIndex].Cells["banner"].FormattedValue.ToString();
-                    txtCalidad.Text = dgvPeliculas.Rows[e.RowIndex].Cells["calidad"].FormattedValue.ToString();
-                    txtDescripcion.Text = dgvPeliculas.Rows[e.RowIndex].Cells["descripcion"].FormattedValue.ToString();
-                    txtDirector.Text = dgvPeliculas.Rows[e.RowIndex].Cells["director"].FormattedValue.ToString();
-                    txtEdad.Text = dgvPeliculas.Rows[e.RowIndex].Cells["categoriaEdad"].FormattedValue.ToString();
-                    txtIdPelicula.Text = dgvPeliculas.Rows[e.RowIndex].Cells["idPeliculas"].FormattedValue.ToString();
-                    txtNombre.Text = dgvPeliculas.Rows[e.RowIndex].Cells["nombre"].FormattedValue.ToString();
-                    txtGenero.Text = dgvPeliculas.Rows[e.RowIndex].Cells["idGeneros"].FormattedValue.ToString();
+                    txtAnio.Text = dgvPeliculas.Rows[e.RowIndex].Cells["Año Estreno"].FormattedValue.ToString();
+                    txtBanner.Text = dgvPeliculas.Rows[e.RowIndex].Cells["Portada"].FormattedValue.ToString();
+                    txtCalidad.Text = dgvPeliculas.Rows[e.RowIndex].Cells["Calidad"].FormattedValue.ToString();
+                    txtDescripcion.Text = dgvPeliculas.Rows[e.RowIndex].Cells["Descripcion"].FormattedValue.ToString();
+                    txtDirector.Text = dgvPeliculas.Rows[e.RowIndex].Cells["Director"].FormattedValue.ToString();
+                    txtEdad.Text = dgvPeliculas.Rows[e.RowIndex].Cells["Categoria"].FormattedValue.ToString();
+                    txtIdPelicula.Text = dgvPeliculas.Rows[e.RowIndex].Cells["Id"].FormattedValue.ToString();
+                    txtNombre.Text = dgvPeliculas.Rows[e.RowIndex].Cells["Nombre"].FormattedValue.ToString();
+                    txtGenero.Text = dgvPeliculas.Rows[e.RowIndex].Cells["Genero"].FormattedValue.ToString();
                 }
             }
             catch
@@ -109,8 +109,8 @@ namespace ChivoFlixDesktop
 
         private void btnReporte_Click(object sender, EventArgs e)
         {
-            //ReportePeliculas reporte = new ReportePeliculas();
-            //reporte.ShowDialog();
+            Reportes.ReportePeliculas reporte = new Reportes.ReportePeliculas();
+            reporte.ShowDialog();
         }
     }
 }

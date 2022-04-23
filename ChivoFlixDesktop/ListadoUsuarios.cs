@@ -95,7 +95,8 @@ namespace ChivoFlixDesktop
 
         private void btnReporte_Click(object sender, EventArgs e)
         {
-
+            Reportes.ReporteUsuarios reporte = new Reportes.ReporteUsuarios();
+            reporte.ShowDialog();
         }
     }
 
