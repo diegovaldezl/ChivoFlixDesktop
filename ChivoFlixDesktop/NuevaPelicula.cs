@@ -26,23 +26,30 @@ namespace ChivoFlixDesktop
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             PeliculaDatos peliculas = new PeliculaDatos();
-            int anio = int.Parse(txtAnio.Text);
-            string nombre = txtNombre.Text;
-            string categoria = txtCEdad.Text;
-            string desc = txtDesc.Text;
-            string calidad = txtCalidad.Text;
-            string director = txtDirector.Text;
-            string banner = txtBanner.Text;
-            int genero = int.Parse(txtGenero.Text);
+            try
+            {
+                int anio = int.Parse(txtAnio.Text);
+                string nombre = txtNombre.Text;
+                string categoria = txtCEdad.Text;
+                string desc = txtDesc.Text;
+                string calidad = txtCalidad.Text;
+                string director = txtDirector.Text;
+                string banner = txtBanner.Text;
+                int genero = int.Parse(txtGenero.Text);
 
-            if (peliculas.InsertPelicula(anio, nombre, categoria, desc, calidad, director, banner, genero))
-            {
-                MessageBox.Show("Pelicula Ingresado");
-                Close();
+                if (peliculas.InsertPelicula(anio, nombre, categoria, desc, calidad, director, banner, genero))
+                {
+                    MessageBox.Show("Pelicula Ingresado");
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Pelicula no Ingreado");
+                }
             }
-            else
+            catch
             {
-                MessageBox.Show("Pelicula no Ingreado");
+                MessageBox.Show("Ingrese datos correctos");
             }
         }
 

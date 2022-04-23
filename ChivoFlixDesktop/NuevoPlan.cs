@@ -21,19 +21,26 @@ namespace ChivoFlixDesktop
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             PlanesDatos planesDatos = new PlanesDatos();
-            string plan = txtPlann.Text;
-            double precio = double.Parse(txtPrecio.Text);
-            int duracion = int.Parse(txtDuracionPlan.Text);
+            try
+            {
+                string plan = txtPlann.Text;
+                double precio = double.Parse(txtPrecio.Text);
+                int duracion = int.Parse(txtDuracionPlan.Text);
 
-            if (planesDatos.InsertPlan(plan, precio, duracion))
-            {
-                MessageBox.Show("Plan Ingresado");
+                if (planesDatos.InsertPlan(plan, precio, duracion))
+                {
+                    MessageBox.Show("Plan Ingresado");
+                }
+                else
+                {
+                    MessageBox.Show("Plan no Ingreado");
+                }
+                Close();
             }
-            else
+            catch
             {
-                MessageBox.Show("Plan no Ingreado");
+                MessageBox.Show("Ingrese datos correctos");
             }
-            Close();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
