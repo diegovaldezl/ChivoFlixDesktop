@@ -31,7 +31,7 @@ namespace ChivoFlixDesktop.Data
             {
                 if (ConexionBd())
                 {
-                    da = new SqlDataAdapter("select idUsuarios,username,email,password,perfiles,imagen,rol from usuarios inner join roles on usuarios.idRol = roles.idRol", cnn);
+                    da = new SqlDataAdapter("select idUsuarios as Id,username as Usuario,email as Correo,password as Contraseña,rol as Rol from usuarios inner join roles on usuarios.idRol = roles.idRol", cnn);
                     dt = new DataTable();
                     da.Fill(dt);
                     gvd.DataSource = dt;
@@ -108,7 +108,7 @@ namespace ChivoFlixDesktop.Data
             {
                 if (ConexionBd())
                 {
-                    da = new SqlDataAdapter("select idUsuarios,username,email,password,perfiles,imagen,rol from usuarios inner join roles on usuarios.idRol = roles.idRol where username like '%"+usuario+"%'", cnn);
+                    da = new SqlDataAdapter("select idUsuarios as Id,username as Usuario,email as Correo,password as Contraseña,rol as Rol from usuarios inner join roles on usuarios.idRol = roles.idRol where username like '%" + usuario+"%'", cnn);
                     dt = new DataTable();
                     da.Fill(dt);
                     gvd.DataSource = dt;

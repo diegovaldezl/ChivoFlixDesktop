@@ -30,8 +30,7 @@ namespace ChivoFlixDesktop.Data
             {
                 if (ConexionBd())
                 {
-                    //TODO agregar inner join para duracion del plan
-                    da = new SqlDataAdapter("select idPlanes as Id,plann as Nombre,precioPlan as Precio,planes.idDuracionPlanes as 'Duracion Plan' from planes inner join duracionPlanes on planes.idUsuarios = duracionPlanes.idDuracionPlanes", cnn);
+                    da = new SqlDataAdapter("select idPlanes as Id,plann as Nombre,precioPlan as Precio,duracionPlanes.nombre as 'Duracion Plan' from planes inner join duracionPlanes on planes.idUsuarios = duracionPlanes.idDuracionPlanes", cnn);
                     dt = new DataTable();
                     da.Fill(dt);
                     gvd.DataSource = dt;
@@ -126,7 +125,6 @@ namespace ChivoFlixDesktop.Data
                     {
                         Connection = cnn,
                         CommandType = CommandType.Text,
-                        //TODO poner identity 1,1 a planes
                         CommandText = "insert into planes(plann,precioPlan,idDuracionPlanes,idUsuarios) " +
                                       "values('" + plan + "','" + precio + "','" + duracion + "',1)"
                     };

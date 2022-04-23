@@ -56,23 +56,30 @@ namespace ChivoFlixDesktop
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(txtIdPelicula.Text);
-            int anio = int.Parse(txtAnio.Text);
-            string nombre = txtNombre.Text;
-            string categoria = txtEdad.Text;
-            string desc = txtDescripcion.Text;
-            string calidad = txtCalidad.Text;
-            string director = txtDirector.Text;
-            string banner = txtBanner.Text;
-            int genero = int.Parse(txtGenero.Text);
-            if (peliculaDatos.UpdatePeliculas(id, anio, nombre, categoria, desc, calidad, director, banner, genero, dgvPeliculas))
+            try
             {
-                MessageBox.Show("Pelicula Actualizada");
-                LimpiarCajas();
+                int id = int.Parse(txtIdPelicula.Text);
+                int anio = int.Parse(txtAnio.Text);
+                string nombre = txtNombre.Text;
+                string categoria = txtEdad.Text;
+                string desc = txtDescripcion.Text;
+                string calidad = txtCalidad.Text;
+                string director = txtDirector.Text;
+                string banner = txtBanner.Text;
+                int genero = int.Parse(txtGenero.Text);
+                if (peliculaDatos.UpdatePeliculas(id, anio, nombre, categoria, desc, calidad, director, banner, genero, dgvPeliculas))
+                {
+                    MessageBox.Show("Pelicula Actualizada");
+                    LimpiarCajas();
+                }
+                else
+                {
+                    MessageBox.Show("Error al actualizar");
+                }
             }
-            else
+            catch
             {
-                MessageBox.Show("Error al actualizar");
+                MessageBox.Show("Error, el genero tiene que ser por ID");
             }
         }
 

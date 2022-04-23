@@ -21,7 +21,6 @@ namespace ChivoFlixDesktop
 
         private void ListadoUsuarios_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'cHIVOFLIXDataSet.usuarios' Puede moverla o quitarla según sea necesario.
             usuariosDatos.SelectUsuarios(dgvUsuarios);
         }
 
@@ -32,10 +31,10 @@ namespace ChivoFlixDesktop
                 if (dgvUsuarios.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
                 {
                     dgvUsuarios.CurrentRow.Selected = true;
-                    txtUserName.Text = dgvUsuarios.Rows[e.RowIndex].Cells["username"].FormattedValue.ToString();
-                    txtPassword.Text = dgvUsuarios.Rows[e.RowIndex].Cells["password"].FormattedValue.ToString();
-                    txtEmail.Text = dgvUsuarios.Rows[e.RowIndex].Cells["email"].FormattedValue.ToString();
-                    txtIdUsuario.Text = dgvUsuarios.Rows[e.RowIndex].Cells["idUsuarios"].FormattedValue.ToString();
+                    txtUserName.Text = dgvUsuarios.Rows[e.RowIndex].Cells["Usuario"].FormattedValue.ToString();
+                    txtPassword.Text = dgvUsuarios.Rows[e.RowIndex].Cells["Contraseña"].FormattedValue.ToString();
+                    txtEmail.Text = dgvUsuarios.Rows[e.RowIndex].Cells["Correo"].FormattedValue.ToString();
+                    txtIdUsuario.Text = dgvUsuarios.Rows[e.RowIndex].Cells["Id"].FormattedValue.ToString();
                 }
             }
             catch

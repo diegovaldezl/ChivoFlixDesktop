@@ -30,8 +30,8 @@ namespace ChivoFlixDesktop
                 if (dgvCategorias.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
                 {
                     dgvCategorias.CurrentRow.Selected = true;
-                    txtNombre.Text = dgvCategorias.Rows[e.RowIndex].Cells["nombre"].FormattedValue.ToString();
-                    txtId.Text = dgvCategorias.Rows[e.RowIndex].Cells["idGeneros"].FormattedValue.ToString();
+                    txtNombre.Text = dgvCategorias.Rows[e.RowIndex].Cells["Nombre"].FormattedValue.ToString();
+                    txtId.Text = dgvCategorias.Rows[e.RowIndex].Cells["Id"].FormattedValue.ToString();
                 }
             }
             catch

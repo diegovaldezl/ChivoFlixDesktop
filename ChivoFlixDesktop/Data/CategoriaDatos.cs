@@ -30,7 +30,7 @@ namespace ChivoFlixDesktop.Data
             {
                 if (ConexionBd())
                 {
-                    da = new SqlDataAdapter("select * from generos", cnn);
+                    da = new SqlDataAdapter("select idGeneros as Id, nombre as Nombre from generos", cnn);
                     dt = new DataTable();
                     da.Fill(dt);
                     gvd.DataSource = dt;
@@ -47,7 +47,7 @@ namespace ChivoFlixDesktop.Data
             {
                 if (ConexionBd())
                 {
-                    da = new SqlDataAdapter("select * from generos where nombre like '%" + nombre + "%'", cnn);
+                    da = new SqlDataAdapter("select idGeneros as Id, nombre as Nombre from generos where nombre like '%" + nombre + "%'", cnn);
                     dt = new DataTable();
                     da.Fill(dt);
                     gvd.DataSource = dt;
