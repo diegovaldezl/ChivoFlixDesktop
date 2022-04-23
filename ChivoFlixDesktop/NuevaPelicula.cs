@@ -45,5 +45,10 @@ namespace ChivoFlixDesktop
                 MessageBox.Show("Pelicula no Ingreado");
             }
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
