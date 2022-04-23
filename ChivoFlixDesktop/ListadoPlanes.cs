@@ -51,6 +51,7 @@ namespace ChivoFlixDesktop
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            //TODO agregar campo para modificar duracion del plan
             string plann = txtPlann.Text;
             double precio = double.Parse(txtPrecio.Text);
             int id = int.Parse(txtIdPlan.Text);
