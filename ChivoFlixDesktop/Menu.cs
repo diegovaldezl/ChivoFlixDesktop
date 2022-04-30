@@ -26,6 +26,7 @@ namespace ChivoFlixDesktop
             panelCategorias.Visible = false;
             panelPlanes.Visible = false;
             panelFacturacion.Visible = false;
+            panelTiempo.Visible = false;
         }
         private void hideSubMenu()
         {
@@ -39,6 +40,8 @@ namespace ChivoFlixDesktop
                 panelPlanes.Visible = false;
             if (panelFacturacion.Visible)
                 panelFacturacion.Visible = false;
+            if (panelTiempo.Visible)
+                panelTiempo.Visible = false;
         }
         private void activeSubMenu(Panel subMenu)
         {
@@ -146,6 +149,16 @@ namespace ChivoFlixDesktop
         private void btnListadoFacturas_Click(object sender, EventArgs e)
         {
             formularioActive(new Facturacion());
+        }
+
+        private void btnTiempo_Click(object sender, EventArgs e)
+        {
+            activeSubMenu(panelTiempo);
+        }
+
+        private void btnPlanesTiempo_Click(object sender, EventArgs e)
+        {
+            formularioActive(new PlanTiempo());
         }
     }
 }

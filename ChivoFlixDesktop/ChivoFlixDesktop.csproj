@@ -185,6 +185,7 @@
     <Compile Include="Data\FacturacionDatos.cs" />
     <Compile Include="Data\PeliculaDatos.cs" />
     <Compile Include="Data\PlanesDatos.cs" />
+    <Compile Include="Data\TiempoPlanesDatos.cs" />
     <Compile Include="Data\UsuariosDatos.cs" />
     <Compile Include="Data\ValidarLogin.cs" />
     <Compile Include="Facturacion.cs">
@@ -266,6 +267,12 @@
     </Compile>
     <Compile Include="NuevoUsuario.designer.cs">
       <DependentUpon>NuevoUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlanTiempo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlanTiempo.Designer.cs">
+      <DependentUpon>PlanTiempo.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -361,6 +368,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoUsuario.resx">
       <DependentUpon>NuevoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanTiempo.resx">
+      <DependentUpon>PlanTiempo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -247,3 +247,4 @@ E:\Repositorio\ChivoFlixDesktop\ChivoFlixDesktop\obj\Debug\ChivoFlixDesktop.Repo
 E:\Repositorio\ChivoFlixDesktop\ChivoFlixDesktop\obj\Debug\ChivoFlixDesktop.Reportes.ReportePeliculas.resources
 E:\Repositorio\ChivoFlixDesktop\ChivoFlixDesktop\obj\Debug\ChivoFlixDesktop.Reportes.ReportePlanes.resources
 E:\Repositorio\ChivoFlixDesktop\ChivoFlixDesktop\obj\Debug\ChivoFlixDesktop.Reportes.ReporteUsuarios.resources
+E:\Repositorio\ChivoFlixDesktop\ChivoFlixDesktop\obj\Debug\ChivoFlixDesktop.PlanTiempo.resources

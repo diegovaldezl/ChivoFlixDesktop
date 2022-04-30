@@ -31,9 +31,9 @@ namespace ChivoFlixDesktop
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.panelFacturacion = new System.Windows.Forms.Panel();
             this.btnListadoFacturas = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -67,8 +67,15 @@ namespace ChivoFlixDesktop
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panelFormularios = new System.Windows.Forms.Panel();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnTiempo = new System.Windows.Forms.Button();
+            this.panelTiempo = new System.Windows.Forms.Panel();
+            this.btnPlanesTiempo = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panelFacturacion.SuspendLayout();
@@ -88,15 +95,19 @@ namespace ChivoFlixDesktop
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.panel5.SuspendLayout();
+            this.panelTiempo.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
             // 
             this.panelMenu.AutoScroll = true;
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panelMenu.Controls.Add(this.pictureBox8);
-            this.panelMenu.Controls.Add(this.panel4);
+            this.panelMenu.Controls.Add(this.panel6);
+            this.panelMenu.Controls.Add(this.panelTiempo);
+            this.panelMenu.Controls.Add(this.panel5);
             this.panelMenu.Controls.Add(this.panelFacturacion);
             this.panelMenu.Controls.Add(this.panel7);
             this.panelMenu.Controls.Add(this.panelPlanes);
@@ -113,15 +124,28 @@ namespace ChivoFlixDesktop
             this.panelMenu.Size = new System.Drawing.Size(188, 547);
             this.panelMenu.TabIndex = 0;
             // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.Black;
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(171, 52);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 15;
+            this.pictureBox8.TabStop = false;
+            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.pictureBox3);
             this.panel4.Controls.Add(this.btnCerrarSesion);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel4.Location = new System.Drawing.Point(0, 459);
+            this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(188, 27);
+            this.panel4.Size = new System.Drawing.Size(171, 27);
             this.panel4.TabIndex = 12;
             // 
             // pictureBox3
@@ -136,20 +160,6 @@ namespace ChivoFlixDesktop
             this.pictureBox3.TabIndex = 14;
             this.pictureBox3.TabStop = false;
             // 
-            // btnCerrarSesion
-            // 
-            this.btnCerrarSesion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
-            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 0);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(188, 23);
-            this.btnCerrarSesion.TabIndex = 0;
-            this.btnCerrarSesion.Text = "Cerrar sesion";
-            this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.UseVisualStyleBackColor = true;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
-            // 
             // panelFacturacion
             // 
             this.panelFacturacion.Controls.Add(this.btnListadoFacturas);
@@ -157,7 +167,7 @@ namespace ChivoFlixDesktop
             this.panelFacturacion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panelFacturacion.Location = new System.Drawing.Point(0, 429);
             this.panelFacturacion.Name = "panelFacturacion";
-            this.panelFacturacion.Size = new System.Drawing.Size(188, 30);
+            this.panelFacturacion.Size = new System.Drawing.Size(171, 30);
             this.panelFacturacion.TabIndex = 11;
             // 
             // btnListadoFacturas
@@ -168,7 +178,7 @@ namespace ChivoFlixDesktop
             this.btnListadoFacturas.Location = new System.Drawing.Point(0, 0);
             this.btnListadoFacturas.Name = "btnListadoFacturas";
             this.btnListadoFacturas.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnListadoFacturas.Size = new System.Drawing.Size(188, 23);
+            this.btnListadoFacturas.Size = new System.Drawing.Size(171, 23);
             this.btnListadoFacturas.TabIndex = 0;
             this.btnListadoFacturas.Text = "Listado de facturas";
             this.btnListadoFacturas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -183,7 +193,7 @@ namespace ChivoFlixDesktop
             this.panel7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel7.Location = new System.Drawing.Point(0, 405);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(188, 24);
+            this.panel7.Size = new System.Drawing.Size(171, 24);
             this.panel7.TabIndex = 10;
             // 
             // pictureBox1
@@ -205,7 +215,7 @@ namespace ChivoFlixDesktop
             this.btnFacturacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFacturacion.Location = new System.Drawing.Point(0, 0);
             this.btnFacturacion.Name = "btnFacturacion";
-            this.btnFacturacion.Size = new System.Drawing.Size(188, 23);
+            this.btnFacturacion.Size = new System.Drawing.Size(171, 23);
             this.btnFacturacion.TabIndex = 0;
             this.btnFacturacion.Text = "Facturación";
             this.btnFacturacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -220,7 +230,7 @@ namespace ChivoFlixDesktop
             this.panelPlanes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panelPlanes.Location = new System.Drawing.Point(0, 356);
             this.panelPlanes.Name = "panelPlanes";
-            this.panelPlanes.Size = new System.Drawing.Size(188, 49);
+            this.panelPlanes.Size = new System.Drawing.Size(171, 49);
             this.panelPlanes.TabIndex = 9;
             // 
             // btnNuevoPlan
@@ -231,7 +241,7 @@ namespace ChivoFlixDesktop
             this.btnNuevoPlan.Location = new System.Drawing.Point(0, 23);
             this.btnNuevoPlan.Name = "btnNuevoPlan";
             this.btnNuevoPlan.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnNuevoPlan.Size = new System.Drawing.Size(188, 23);
+            this.btnNuevoPlan.Size = new System.Drawing.Size(171, 23);
             this.btnNuevoPlan.TabIndex = 1;
             this.btnNuevoPlan.Text = "Nuevo plan";
             this.btnNuevoPlan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -246,7 +256,7 @@ namespace ChivoFlixDesktop
             this.btnListadoPlanes.Location = new System.Drawing.Point(0, 0);
             this.btnListadoPlanes.Name = "btnListadoPlanes";
             this.btnListadoPlanes.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnListadoPlanes.Size = new System.Drawing.Size(188, 23);
+            this.btnListadoPlanes.Size = new System.Drawing.Size(171, 23);
             this.btnListadoPlanes.TabIndex = 0;
             this.btnListadoPlanes.Text = "Listado de planes";
             this.btnListadoPlanes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -261,7 +271,7 @@ namespace ChivoFlixDesktop
             this.panel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel.Location = new System.Drawing.Point(0, 331);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(188, 25);
+            this.panel.Size = new System.Drawing.Size(171, 25);
             this.panel.TabIndex = 8;
             // 
             // pictureBox2
@@ -284,7 +294,7 @@ namespace ChivoFlixDesktop
             this.btnPlanes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlanes.Location = new System.Drawing.Point(0, 0);
             this.btnPlanes.Name = "btnPlanes";
-            this.btnPlanes.Size = new System.Drawing.Size(188, 23);
+            this.btnPlanes.Size = new System.Drawing.Size(171, 23);
             this.btnPlanes.TabIndex = 0;
             this.btnPlanes.Text = "Planes";
             this.btnPlanes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -299,7 +309,7 @@ namespace ChivoFlixDesktop
             this.panelCategorias.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panelCategorias.Location = new System.Drawing.Point(0, 281);
             this.panelCategorias.Name = "panelCategorias";
-            this.panelCategorias.Size = new System.Drawing.Size(188, 50);
+            this.panelCategorias.Size = new System.Drawing.Size(171, 50);
             this.panelCategorias.TabIndex = 7;
             // 
             // btnNuevaCategoria
@@ -310,7 +320,7 @@ namespace ChivoFlixDesktop
             this.btnNuevaCategoria.Location = new System.Drawing.Point(0, 23);
             this.btnNuevaCategoria.Name = "btnNuevaCategoria";
             this.btnNuevaCategoria.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnNuevaCategoria.Size = new System.Drawing.Size(188, 23);
+            this.btnNuevaCategoria.Size = new System.Drawing.Size(171, 23);
             this.btnNuevaCategoria.TabIndex = 1;
             this.btnNuevaCategoria.Text = "Nueva categoria";
             this.btnNuevaCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -325,7 +335,7 @@ namespace ChivoFlixDesktop
             this.btnListadoCategorias.Location = new System.Drawing.Point(0, 0);
             this.btnListadoCategorias.Name = "btnListadoCategorias";
             this.btnListadoCategorias.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnListadoCategorias.Size = new System.Drawing.Size(188, 23);
+            this.btnListadoCategorias.Size = new System.Drawing.Size(171, 23);
             this.btnListadoCategorias.TabIndex = 0;
             this.btnListadoCategorias.Text = "Listado de categorias";
             this.btnListadoCategorias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -340,7 +350,7 @@ namespace ChivoFlixDesktop
             this.panel3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel3.Location = new System.Drawing.Point(0, 252);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(188, 29);
+            this.panel3.Size = new System.Drawing.Size(171, 29);
             this.panel3.TabIndex = 6;
             // 
             // pictureBox4
@@ -362,7 +372,7 @@ namespace ChivoFlixDesktop
             this.btnCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCategorias.Location = new System.Drawing.Point(0, 0);
             this.btnCategorias.Name = "btnCategorias";
-            this.btnCategorias.Size = new System.Drawing.Size(188, 23);
+            this.btnCategorias.Size = new System.Drawing.Size(171, 23);
             this.btnCategorias.TabIndex = 0;
             this.btnCategorias.Text = "Categorias";
             this.btnCategorias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -377,7 +387,7 @@ namespace ChivoFlixDesktop
             this.panelPeliculas.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panelPeliculas.Location = new System.Drawing.Point(0, 203);
             this.panelPeliculas.Name = "panelPeliculas";
-            this.panelPeliculas.Size = new System.Drawing.Size(188, 49);
+            this.panelPeliculas.Size = new System.Drawing.Size(171, 49);
             this.panelPeliculas.TabIndex = 5;
             // 
             // btnNuevaPelicula
@@ -388,7 +398,7 @@ namespace ChivoFlixDesktop
             this.btnNuevaPelicula.Location = new System.Drawing.Point(0, 23);
             this.btnNuevaPelicula.Name = "btnNuevaPelicula";
             this.btnNuevaPelicula.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnNuevaPelicula.Size = new System.Drawing.Size(188, 23);
+            this.btnNuevaPelicula.Size = new System.Drawing.Size(171, 23);
             this.btnNuevaPelicula.TabIndex = 1;
             this.btnNuevaPelicula.Text = "Nueva pelicula";
             this.btnNuevaPelicula.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -403,7 +413,7 @@ namespace ChivoFlixDesktop
             this.btnListadoPeliculas.Location = new System.Drawing.Point(0, 0);
             this.btnListadoPeliculas.Name = "btnListadoPeliculas";
             this.btnListadoPeliculas.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnListadoPeliculas.Size = new System.Drawing.Size(188, 23);
+            this.btnListadoPeliculas.Size = new System.Drawing.Size(171, 23);
             this.btnListadoPeliculas.TabIndex = 0;
             this.btnListadoPeliculas.Text = "Listado de peliculas";
             this.btnListadoPeliculas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -418,7 +428,7 @@ namespace ChivoFlixDesktop
             this.panel2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel2.Location = new System.Drawing.Point(0, 176);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(188, 27);
+            this.panel2.Size = new System.Drawing.Size(171, 27);
             this.panel2.TabIndex = 4;
             // 
             // pictureBox5
@@ -440,7 +450,7 @@ namespace ChivoFlixDesktop
             this.btnPeliculas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPeliculas.Location = new System.Drawing.Point(0, 0);
             this.btnPeliculas.Name = "btnPeliculas";
-            this.btnPeliculas.Size = new System.Drawing.Size(188, 23);
+            this.btnPeliculas.Size = new System.Drawing.Size(171, 23);
             this.btnPeliculas.TabIndex = 0;
             this.btnPeliculas.Text = "Peliculas";
             this.btnPeliculas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -455,7 +465,7 @@ namespace ChivoFlixDesktop
             this.panelUsuarios.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panelUsuarios.Location = new System.Drawing.Point(0, 124);
             this.panelUsuarios.Name = "panelUsuarios";
-            this.panelUsuarios.Size = new System.Drawing.Size(188, 52);
+            this.panelUsuarios.Size = new System.Drawing.Size(171, 52);
             this.panelUsuarios.TabIndex = 3;
             // 
             // btnNuevoUsuario
@@ -466,7 +476,7 @@ namespace ChivoFlixDesktop
             this.btnNuevoUsuario.Location = new System.Drawing.Point(0, 24);
             this.btnNuevoUsuario.Name = "btnNuevoUsuario";
             this.btnNuevoUsuario.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnNuevoUsuario.Size = new System.Drawing.Size(188, 23);
+            this.btnNuevoUsuario.Size = new System.Drawing.Size(171, 23);
             this.btnNuevoUsuario.TabIndex = 1;
             this.btnNuevoUsuario.Text = "Nuevo usuario";
             this.btnNuevoUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -481,7 +491,7 @@ namespace ChivoFlixDesktop
             this.btnListadoUsuarios.Location = new System.Drawing.Point(0, 0);
             this.btnListadoUsuarios.Name = "btnListadoUsuarios";
             this.btnListadoUsuarios.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnListadoUsuarios.Size = new System.Drawing.Size(188, 24);
+            this.btnListadoUsuarios.Size = new System.Drawing.Size(171, 24);
             this.btnListadoUsuarios.TabIndex = 0;
             this.btnListadoUsuarios.Text = "Listado de usuarios";
             this.btnListadoUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -496,7 +506,7 @@ namespace ChivoFlixDesktop
             this.panel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.Location = new System.Drawing.Point(0, 100);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(188, 24);
+            this.panel1.Size = new System.Drawing.Size(171, 24);
             this.panel1.TabIndex = 2;
             // 
             // pictureBox6
@@ -519,7 +529,7 @@ namespace ChivoFlixDesktop
             this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsuarios.Location = new System.Drawing.Point(0, 0);
             this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Size = new System.Drawing.Size(188, 23);
+            this.btnUsuarios.Size = new System.Drawing.Size(171, 23);
             this.btnUsuarios.TabIndex = 0;
             this.btnUsuarios.Text = "Usuarios";
             this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -535,7 +545,7 @@ namespace ChivoFlixDesktop
             this.panelHeader.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(188, 100);
+            this.panelHeader.Size = new System.Drawing.Size(171, 100);
             this.panelHeader.TabIndex = 1;
             // 
             // pictureBox7
@@ -571,17 +581,87 @@ namespace ChivoFlixDesktop
             this.panelFormularios.Size = new System.Drawing.Size(736, 547);
             this.panelFormularios.TabIndex = 1;
             // 
-            // pictureBox8
+            // btnCerrarSesion
             // 
-            this.pictureBox8.BackColor = System.Drawing.Color.Black;
-            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(0, 492);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(185, 52);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 15;
-            this.pictureBox8.TabStop = false;
+            this.btnCerrarSesion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 0);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(171, 23);
+            this.btnCerrarSesion.TabIndex = 0;
+            this.btnCerrarSesion.Text = "Cerrar sesion";
+            this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrarSesion.UseVisualStyleBackColor = true;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.btnTiempo);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 459);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(171, 28);
+            this.panel5.TabIndex = 12;
+            // 
+            // btnTiempo
+            // 
+            this.btnTiempo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTiempo.FlatAppearance.BorderSize = 0;
+            this.btnTiempo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTiempo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnTiempo.Location = new System.Drawing.Point(0, 0);
+            this.btnTiempo.Name = "btnTiempo";
+            this.btnTiempo.Size = new System.Drawing.Size(171, 23);
+            this.btnTiempo.TabIndex = 0;
+            this.btnTiempo.Text = "Tiempo";
+            this.btnTiempo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTiempo.UseVisualStyleBackColor = true;
+            this.btnTiempo.Click += new System.EventHandler(this.btnTiempo_Click);
+            // 
+            // panelTiempo
+            // 
+            this.panelTiempo.Controls.Add(this.btnPlanesTiempo);
+            this.panelTiempo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTiempo.Location = new System.Drawing.Point(0, 487);
+            this.panelTiempo.Name = "panelTiempo";
+            this.panelTiempo.Size = new System.Drawing.Size(171, 28);
+            this.panelTiempo.TabIndex = 13;
+            // 
+            // btnPlanesTiempo
+            // 
+            this.btnPlanesTiempo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPlanesTiempo.FlatAppearance.BorderSize = 0;
+            this.btnPlanesTiempo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlanesTiempo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnPlanesTiempo.Location = new System.Drawing.Point(0, 0);
+            this.btnPlanesTiempo.Name = "btnPlanesTiempo";
+            this.btnPlanesTiempo.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnPlanesTiempo.Size = new System.Drawing.Size(171, 21);
+            this.btnPlanesTiempo.TabIndex = 0;
+            this.btnPlanesTiempo.Text = "Planes Tiempo";
+            this.btnPlanesTiempo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPlanesTiempo.UseVisualStyleBackColor = true;
+            this.btnPlanesTiempo.Click += new System.EventHandler(this.btnPlanesTiempo_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.panel8);
+            this.panel6.Controls.Add(this.panel4);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 515);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(171, 87);
+            this.panel6.TabIndex = 16;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.pictureBox8);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.Location = new System.Drawing.Point(0, 27);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(171, 55);
+            this.panel8.TabIndex = 13;
             // 
             // Menu
             // 
@@ -595,6 +675,7 @@ namespace ChivoFlixDesktop
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.panelMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panelFacturacion.ResumeLayout(false);
@@ -615,7 +696,10 @@ namespace ChivoFlixDesktop
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panelTiempo.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -650,7 +734,6 @@ namespace ChivoFlixDesktop
         private System.Windows.Forms.Panel panelFacturacion;
         private System.Windows.Forms.Button btnListadoFacturas;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button btnCerrarSesion;
         private System.Windows.Forms.Button btnPlanes;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -660,5 +743,12 @@ namespace ChivoFlixDesktop
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Button btnCerrarSesion;
+        private System.Windows.Forms.Panel panelTiempo;
+        private System.Windows.Forms.Button btnPlanesTiempo;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button btnTiempo;
     }
 }
