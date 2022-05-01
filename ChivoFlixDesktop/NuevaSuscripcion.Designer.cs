@@ -162,6 +162,9 @@ namespace ChivoFlixDesktop
             // 
             // btnSuscribirse
             // 
+            this.btnSuscribirse.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSuscribirse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSuscribirse.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSuscribirse.Location = new System.Drawing.Point(82, 369);
             this.btnSuscribirse.Name = "btnSuscribirse";
             this.btnSuscribirse.Size = new System.Drawing.Size(80, 23);
@@ -172,9 +175,12 @@ namespace ChivoFlixDesktop
             // 
             // btnAtras
             // 
-            this.btnAtras.Location = new System.Drawing.Point(289, 369);
+            this.btnAtras.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtras.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnAtras.Location = new System.Drawing.Point(275, 369);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(75, 23);
+            this.btnAtras.Size = new System.Drawing.Size(89, 23);
             this.btnAtras.TabIndex = 13;
             this.btnAtras.Text = "REGRESAR";
             this.btnAtras.UseVisualStyleBackColor = true;
@@ -256,7 +262,7 @@ namespace ChivoFlixDesktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gray;
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);

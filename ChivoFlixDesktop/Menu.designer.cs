@@ -140,6 +140,7 @@ namespace ChivoFlixDesktop
             // 
             // panel8
             // 
+            this.panel8.BackColor = System.Drawing.Color.LightGray;
             this.panel8.Controls.Add(this.pictureBox8);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 27);
