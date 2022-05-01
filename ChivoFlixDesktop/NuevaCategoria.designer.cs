@@ -127,6 +127,7 @@ namespace ChivoFlixDesktop
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(736, 547);
             this.Name = "NuevaCategoria";
             this.Text = "NuevaCategoria";

@@ -182,6 +182,7 @@ namespace ChivoFlixDesktop
             this.Controls.Add(this.btnAgregarTiempo);
             this.Controls.Add(this.dgvTiempo);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PlanTiempo";
             this.Text = "PlanTiempo";
             this.Load += new System.EventHandler(this.PlanTiempo_Load);

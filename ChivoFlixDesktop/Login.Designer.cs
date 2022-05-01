@@ -35,6 +35,7 @@ namespace ChivoFlixDesktop
             this.label1 = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSuscripcion = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -42,7 +43,6 @@ namespace ChivoFlixDesktop
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtClave = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnSuscripcion = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -54,6 +54,7 @@ namespace ChivoFlixDesktop
             // btnIngresar
             // 
             this.btnIngresar.BackColor = System.Drawing.Color.Transparent;
+            this.btnIngresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIngresar.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnIngresar.Location = new System.Drawing.Point(23, 295);
@@ -67,6 +68,7 @@ namespace ChivoFlixDesktop
             // btnSalir
             // 
             this.btnSalir.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnSalir.Location = new System.Drawing.Point(168, 294);
@@ -113,6 +115,20 @@ namespace ChivoFlixDesktop
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(304, 385);
             this.panel1.TabIndex = 4;
+            // 
+            // btnSuscripcion
+            // 
+            this.btnSuscripcion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSuscripcion.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSuscripcion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSuscripcion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSuscripcion.Location = new System.Drawing.Point(92, 341);
+            this.btnSuscripcion.Name = "btnSuscripcion";
+            this.btnSuscripcion.Size = new System.Drawing.Size(101, 23);
+            this.btnSuscripcion.TabIndex = 13;
+            this.btnSuscripcion.Text = "SUSCRIBIRSE";
+            this.btnSuscripcion.UseVisualStyleBackColor = false;
+            this.btnSuscripcion.Click += new System.EventHandler(this.btnSuscripcion_Click);
             // 
             // pictureBox5
             // 
@@ -191,16 +207,6 @@ namespace ChivoFlixDesktop
             this.label2.Size = new System.Drawing.Size(64, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Contraseña:";
-            // 
-            // btnSuscripcion
-            // 
-            this.btnSuscripcion.Location = new System.Drawing.Point(114, 339);
-            this.btnSuscripcion.Name = "btnSuscripcion";
-            this.btnSuscripcion.Size = new System.Drawing.Size(75, 23);
-            this.btnSuscripcion.TabIndex = 13;
-            this.btnSuscripcion.Text = "button1";
-            this.btnSuscripcion.UseVisualStyleBackColor = true;
-            this.btnSuscripcion.Click += new System.EventHandler(this.btnSuscripcion_Click);
             // 
             // Login
             // 

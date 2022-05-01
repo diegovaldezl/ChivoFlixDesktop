@@ -197,6 +197,7 @@ namespace ChivoFlixDesktop
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NuevoPlan";
             this.Text = "NuevoPlan";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

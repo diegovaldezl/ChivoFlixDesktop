@@ -277,6 +277,7 @@ namespace ChivoFlixDesktop
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvUsuarios);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(736, 547);
             this.Name = "ListadoUsuarios";
             this.Load += new System.EventHandler(this.ListadoUsuarios_Load);

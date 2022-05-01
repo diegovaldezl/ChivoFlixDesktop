@@ -399,6 +399,7 @@ namespace ChivoFlixDesktop
             this.Controls.Add(this.dgvPeliculas);
             this.Controls.Add(this.btnNueva);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(736, 547);
             this.Name = "ListadoPeliculas";
             this.Text = "ListadoPeliculas";

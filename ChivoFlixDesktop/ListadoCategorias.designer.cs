@@ -268,6 +268,7 @@ namespace ChivoFlixDesktop
             this.Controls.Add(this.dgvCategorias);
             this.Controls.Add(this.txtNombreBuscar);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(736, 547);
             this.Name = "ListadoCategorias";
             this.Text = "ListadoCategorias";
