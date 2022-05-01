@@ -162,9 +162,9 @@ namespace ChivoFlixDesktop
             // 
             // btnSuscribirse
             // 
-            this.btnSuscribirse.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSuscribirse.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnSuscribirse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSuscribirse.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSuscribirse.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnSuscribirse.Location = new System.Drawing.Point(82, 369);
             this.btnSuscribirse.Name = "btnSuscribirse";
             this.btnSuscribirse.Size = new System.Drawing.Size(80, 23);
@@ -175,9 +175,9 @@ namespace ChivoFlixDesktop
             // 
             // btnAtras
             // 
-            this.btnAtras.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnAtras.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAtras.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnAtras.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.btnAtras.Location = new System.Drawing.Point(275, 369);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(89, 23);

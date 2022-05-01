@@ -26,7 +26,7 @@ namespace ChivoFlixDesktop
             }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new NuevaSuscripcion());
+            Application.Run(new Login());
         }
     }
 }

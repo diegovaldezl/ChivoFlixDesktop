@@ -29,7 +29,7 @@ namespace ChivoFlixDesktop.Data
             {
                 if (ConexionBd())
                 {
-                    da = new SqlDataAdapter("select * from facturaciones", cnn);
+                    da = new SqlDataAdapter("select idFacturaciones,facturaciones.idUsuarios,facturaciones.idPlanes,plann,fechaAdquirido,tipo,total,usuarios.username from facturaciones  inner join usuarios on usuarios.idUsuarios = facturaciones.idFacturaciones", cnn);
                     dt = new DataTable();
                     da.Fill(dt);
                     gvd.DataSource = dt;

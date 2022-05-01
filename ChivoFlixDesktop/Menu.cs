@@ -98,7 +98,6 @@ namespace ChivoFlixDesktop
             Close();
             Login login = new Login();
             login.Show();
-            
         }
 
         private void btnPlanes_Click(object sender, EventArgs e)

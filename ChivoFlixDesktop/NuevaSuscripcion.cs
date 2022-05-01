@@ -128,8 +128,7 @@ namespace ChivoFlixDesktop
 
         private void btnAtras_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
-            login.Show();
+            Close();
         }
     }
 }

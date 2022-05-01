@@ -58,7 +58,8 @@ namespace ChivoFlixDesktop
         }
         private void btnSuscripcion_Click(object sender, EventArgs e)
         {
-
+            NuevaSuscripcion nuevaSuscripcion = new NuevaSuscripcion();
+            nuevaSuscripcion.Show();
         }
     }
 }
