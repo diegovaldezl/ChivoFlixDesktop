@@ -31,9 +31,15 @@ namespace ChivoFlixDesktop
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.panelTiempo = new System.Windows.Forms.Panel();
+            this.btnPlanesTiempo = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnTiempo = new System.Windows.Forms.Button();
             this.panelFacturacion = new System.Windows.Forms.Panel();
             this.btnListadoFacturas = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -67,17 +73,14 @@ namespace ChivoFlixDesktop
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panelFormularios = new System.Windows.Forms.Panel();
-            this.btnCerrarSesion = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.btnTiempo = new System.Windows.Forms.Button();
-            this.panelTiempo = new System.Windows.Forms.Panel();
-            this.btnPlanesTiempo = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
+            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panelTiempo.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panelFacturacion.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -95,9 +98,6 @@ namespace ChivoFlixDesktop
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            this.panel5.SuspendLayout();
-            this.panelTiempo.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -123,6 +123,16 @@ namespace ChivoFlixDesktop
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(188, 547);
             this.panelMenu.TabIndex = 0;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.panel8);
+            this.panel6.Controls.Add(this.panel4);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 515);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(171, 87);
+            this.panel6.TabIndex = 16;
             // 
             // pictureBox8
             // 
@@ -159,6 +169,69 @@ namespace ChivoFlixDesktop
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 14;
             this.pictureBox3.TabStop = false;
+            // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 0);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(171, 23);
+            this.btnCerrarSesion.TabIndex = 0;
+            this.btnCerrarSesion.Text = "Cerrar sesion";
+            this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrarSesion.UseVisualStyleBackColor = true;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            // 
+            // panelTiempo
+            // 
+            this.panelTiempo.Controls.Add(this.btnPlanesTiempo);
+            this.panelTiempo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTiempo.Location = new System.Drawing.Point(0, 487);
+            this.panelTiempo.Name = "panelTiempo";
+            this.panelTiempo.Size = new System.Drawing.Size(171, 28);
+            this.panelTiempo.TabIndex = 13;
+            // 
+            // btnPlanesTiempo
+            // 
+            this.btnPlanesTiempo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPlanesTiempo.FlatAppearance.BorderSize = 0;
+            this.btnPlanesTiempo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlanesTiempo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnPlanesTiempo.Location = new System.Drawing.Point(0, 0);
+            this.btnPlanesTiempo.Name = "btnPlanesTiempo";
+            this.btnPlanesTiempo.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnPlanesTiempo.Size = new System.Drawing.Size(171, 21);
+            this.btnPlanesTiempo.TabIndex = 0;
+            this.btnPlanesTiempo.Text = "Planes Tiempo";
+            this.btnPlanesTiempo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPlanesTiempo.UseVisualStyleBackColor = true;
+            this.btnPlanesTiempo.Click += new System.EventHandler(this.btnPlanesTiempo_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.btnTiempo);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 459);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(171, 28);
+            this.panel5.TabIndex = 12;
+            // 
+            // btnTiempo
+            // 
+            this.btnTiempo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTiempo.FlatAppearance.BorderSize = 0;
+            this.btnTiempo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTiempo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnTiempo.Location = new System.Drawing.Point(0, 0);
+            this.btnTiempo.Name = "btnTiempo";
+            this.btnTiempo.Size = new System.Drawing.Size(171, 23);
+            this.btnTiempo.TabIndex = 0;
+            this.btnTiempo.Text = "Tiempo";
+            this.btnTiempo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTiempo.UseVisualStyleBackColor = true;
+            this.btnTiempo.Click += new System.EventHandler(this.btnTiempo_Click);
             // 
             // panelFacturacion
             // 
@@ -581,79 +654,6 @@ namespace ChivoFlixDesktop
             this.panelFormularios.Size = new System.Drawing.Size(736, 547);
             this.panelFormularios.TabIndex = 1;
             // 
-            // btnCerrarSesion
-            // 
-            this.btnCerrarSesion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
-            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 0);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(171, 23);
-            this.btnCerrarSesion.TabIndex = 0;
-            this.btnCerrarSesion.Text = "Cerrar sesion";
-            this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.UseVisualStyleBackColor = true;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.btnTiempo);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 459);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(171, 28);
-            this.panel5.TabIndex = 12;
-            // 
-            // btnTiempo
-            // 
-            this.btnTiempo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTiempo.FlatAppearance.BorderSize = 0;
-            this.btnTiempo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTiempo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnTiempo.Location = new System.Drawing.Point(0, 0);
-            this.btnTiempo.Name = "btnTiempo";
-            this.btnTiempo.Size = new System.Drawing.Size(171, 23);
-            this.btnTiempo.TabIndex = 0;
-            this.btnTiempo.Text = "Tiempo";
-            this.btnTiempo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTiempo.UseVisualStyleBackColor = true;
-            this.btnTiempo.Click += new System.EventHandler(this.btnTiempo_Click);
-            // 
-            // panelTiempo
-            // 
-            this.panelTiempo.Controls.Add(this.btnPlanesTiempo);
-            this.panelTiempo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTiempo.Location = new System.Drawing.Point(0, 487);
-            this.panelTiempo.Name = "panelTiempo";
-            this.panelTiempo.Size = new System.Drawing.Size(171, 28);
-            this.panelTiempo.TabIndex = 13;
-            // 
-            // btnPlanesTiempo
-            // 
-            this.btnPlanesTiempo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPlanesTiempo.FlatAppearance.BorderSize = 0;
-            this.btnPlanesTiempo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlanesTiempo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnPlanesTiempo.Location = new System.Drawing.Point(0, 0);
-            this.btnPlanesTiempo.Name = "btnPlanesTiempo";
-            this.btnPlanesTiempo.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnPlanesTiempo.Size = new System.Drawing.Size(171, 21);
-            this.btnPlanesTiempo.TabIndex = 0;
-            this.btnPlanesTiempo.Text = "Planes Tiempo";
-            this.btnPlanesTiempo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPlanesTiempo.UseVisualStyleBackColor = true;
-            this.btnPlanesTiempo.Click += new System.EventHandler(this.btnPlanesTiempo_Click);
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.panel8);
-            this.panel6.Controls.Add(this.panel4);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 515);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(171, 87);
-            this.panel6.TabIndex = 16;
-            // 
             // panel8
             // 
             this.panel8.Controls.Add(this.pictureBox8);
@@ -675,9 +675,12 @@ namespace ChivoFlixDesktop
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.panelMenu.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panelTiempo.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.panelFacturacion.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -696,9 +699,6 @@ namespace ChivoFlixDesktop
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panelTiempo.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -744,11 +744,11 @@ namespace ChivoFlixDesktop
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button btnCerrarSesion;
         private System.Windows.Forms.Panel panelTiempo;
         private System.Windows.Forms.Button btnPlanesTiempo;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnTiempo;
+        private System.Windows.Forms.Panel panel8;
     }
 }

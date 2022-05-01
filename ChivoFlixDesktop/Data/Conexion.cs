@@ -11,8 +11,8 @@ namespace ChivoFlixDesktop
 {
     public class Conexion
     {
-        public static string servidor = "DESKTOP-SNEK398";
-        private List<string> roles = new List<string>() { "Administrador", "Usuario" };
+        public static string servidor = @"localhost\SQLEXPRESS";
+        private readonly List<string> roles = new List<string>() { "Administrador", "Usuario" };
         public static string cadenaChivo = "Data Source=" + servidor + ";Initial Catalog=CHIVOFLIX;Integrated Security=True";
         public bool CrearBD()
         {
@@ -28,9 +28,8 @@ namespace ChivoFlixDesktop
                 cmd.ExecuteNonQuery();
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message, "Error al crear la base chivoflix", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             finally

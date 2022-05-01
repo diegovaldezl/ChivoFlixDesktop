@@ -29,16 +29,23 @@ namespace ChivoFlixDesktop
             string usuario = txtUsuarioIngresar.Text;
             string email = txtEmailIngresar.Text;
             string clave = txtPasswordIngresar.Text;
-            
-            if(usuarios.InsertUsuario(usuario, email, clave))
+
+            try
             {
-                MessageBox.Show("Usuario Ingresado");
+                if(usuarios.InsertUsuario(usuario, email, clave))
+                {
+                    MessageBox.Show("Usuario Ingresado");
+                }
+                else
+                {
+                    MessageBox.Show("Usuario no Ingresado");
+                }
+                Close();
             }
-            else
+            catch
             {
-                MessageBox.Show("Usuario no Ingreado");
+                MessageBox.Show("Ingrese datos correctos");
             }
-            Close();
         }
     }
 }

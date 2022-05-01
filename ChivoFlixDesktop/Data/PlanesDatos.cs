@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -11,6 +12,9 @@ namespace ChivoFlixDesktop.Data
         SqlCommand cmd;
         SqlDataAdapter da;
         DataTable dt;
+        SqlDataReader dr;
+
+        public List<string> listaPlanes = new List<string>();
 
         public bool ConexionBd()
         {
@@ -142,7 +146,30 @@ namespace ChivoFlixDesktop.Data
             {
                 return false;
             }
+        }
+        public void SelectPlanes()
+        {
+            try
+            {
+                if (ConexionBd())
+                {
+                    cmd = new SqlCommand("select idPlanes as Id,plann as Nombre,precioPlan as Precio,duracionPlanes.nombre as 'Duracion Plan' from planes inner join duracionPlanes on planes.idUsuarios = duracionPlanes.idDuracionPlanes", cnn);
+                    cnn.Open();
+                    dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        listaPlanes.Add((string)dr[1]);
+                        Console.Write(listaPlanes);
+                    }
+                    dr.Close();
+                    cnn.Close();
+                }
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Intente de nuevo: " + ex.ToString());
+            }
         }
     }
 }

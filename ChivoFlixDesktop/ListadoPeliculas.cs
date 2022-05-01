@@ -46,6 +46,7 @@ namespace ChivoFlixDesktop
                     txtIdPelicula.Text = dgvPeliculas.Rows[e.RowIndex].Cells["Id"].FormattedValue.ToString();
                     txtNombre.Text = dgvPeliculas.Rows[e.RowIndex].Cells["Nombre"].FormattedValue.ToString();
                     txtGenero.Text = dgvPeliculas.Rows[e.RowIndex].Cells["Genero"].FormattedValue.ToString();
+                    txtPelicula.Text = dgvPeliculas.Rows[e.RowIndex].Cells["Pelicula"].FormattedValue.ToString();
                 }
             }
             catch
@@ -66,8 +67,10 @@ namespace ChivoFlixDesktop
                 string calidad = txtCalidad.Text;
                 string director = txtDirector.Text;
                 string banner = txtBanner.Text;
+                string link = txtPelicula.Text;
+
                 int genero = int.Parse(txtGenero.Text);
-                if (peliculaDatos.UpdatePeliculas(id, anio, nombre, categoria, desc, calidad, director, banner, genero, dgvPeliculas))
+                if (peliculaDatos.UpdatePeliculas(id, anio, nombre, categoria, desc, calidad, director, banner, genero, link, dgvPeliculas))
                 {
                     MessageBox.Show("Pelicula Actualizada");
                     LimpiarCajas();
@@ -107,6 +110,7 @@ namespace ChivoFlixDesktop
             txtEdad.Clear();
             txtNombre.Clear();
             txtGenero.Clear();
+            txtPelicula.Clear();
         }
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)

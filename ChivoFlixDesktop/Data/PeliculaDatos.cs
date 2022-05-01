@@ -34,6 +34,7 @@ namespace ChivoFlixDesktop.Data
                         "anioEstreno as 'Año Estreno', categoriaEdad as Categoria, " +
                         "descripcion as Descripcion, calidad as Calidad, " +
                         "director as Director, banner as Portada, " +
+                        "pelicula as Pelicula, " +
                         "generos.nombre as Genero " +
                         "FROM peliculas inner join generos on " +
                         "peliculas.idGeneros = generos.idGeneros", cnn);
@@ -57,6 +58,7 @@ namespace ChivoFlixDesktop.Data
                         "anioEstreno as 'Año Estreno', categoriaEdad as Categoria, " +
                         "descripcion as Descripcion, calidad as Calidad, " +
                         "director as Director, banner as Portada, " +
+                        "pelicula as Pelicula, " +
                         "generos.nombre as Genero " +
                         "FROM peliculas inner join generos on " +
                         "peliculas.idGeneros = generos.idGeneros where peliculas.nombre like '%" + nombre + "%'", cnn);
@@ -70,7 +72,7 @@ namespace ChivoFlixDesktop.Data
                 MessageBox.Show("Intente de nuevo: " + ex.ToString());
             }
         }
-        public bool UpdatePeliculas(int id, int anio, string nombre, string categoria, string desc, string calidad, string director, string banner, int genero, DataGridView dgv)
+        public bool UpdatePeliculas(int id, int anio, string nombre, string categoria, string desc, string calidad, string director, string banner, int genero, string link, DataGridView dgv)
         {
             try
             {
@@ -80,7 +82,7 @@ namespace ChivoFlixDesktop.Data
                     {
                         Connection = cnn,
                         CommandType = CommandType.Text,
-                        CommandText = "update peliculas set anioEstreno = '" + anio + "', nombre='" + nombre + "', categoriaEdad = '" + categoria + "', descripcion = '" + desc + "', calidad = '" + calidad + "', director = '" + director + "', banner = '" + banner + "', idGeneros = '" + genero + "' where idPeliculas = " + id
+                        CommandText = "update peliculas set anioEstreno = '" + anio + "', nombre='" + nombre + "', categoriaEdad = '" + categoria + "', descripcion = '" + desc + "', calidad = '" + calidad + "', director = '" + director + "', banner = '" + banner + "', idGeneros = '" + genero + "', pelicula = '" + link + "' where idPeliculas = " + id
                     };
                     cnn.Open();
                     cmd.ExecuteNonQuery();
@@ -127,7 +129,7 @@ namespace ChivoFlixDesktop.Data
                 return false;
             }
         }
-        public bool InsertPelicula(int anio, string nombre, string categoria, string desc, string calidad, string director, string banner, int genero)
+        public bool InsertPelicula(int anio, string nombre, string categoria, string desc, string calidad, string director, string banner, int genero, string pelicula)
         {
             try
             {
@@ -137,8 +139,8 @@ namespace ChivoFlixDesktop.Data
                     {
                         Connection = cnn,
                         CommandType = CommandType.Text,
-                        CommandText = "insert into peliculas(nombre,anioEstreno,categoriaEdad,descripcion,calidad,director,banner,idGeneros) " +
-                        "values('" + nombre + "','" + anio + "','" + categoria + "','" + desc + "','" + calidad + "','" + director + "','" + banner + "','" + genero + "')"
+                        CommandText = "insert into peliculas(nombre,anioEstreno,categoriaEdad,descripcion,calidad,director,banner,idGeneros,pelicula) " +
+                        "values('" + nombre + "','" + anio + "','" + categoria + "','" + desc + "','" + calidad + "','" + director + "','" + banner + "','" + genero + "','" + pelicula + "')"
                     };
                     cnn.Open();
                     cmd.ExecuteNonQuery();

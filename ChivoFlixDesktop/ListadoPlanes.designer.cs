@@ -93,6 +93,7 @@ namespace ChivoFlixDesktop
             // 
             // dvgPlanes
             // 
+            this.dvgPlanes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dvgPlanes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgPlanes.Location = new System.Drawing.Point(13, 75);
             this.dvgPlanes.Name = "dvgPlanes";

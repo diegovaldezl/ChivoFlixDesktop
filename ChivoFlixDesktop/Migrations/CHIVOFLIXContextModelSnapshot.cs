@@ -195,6 +195,9 @@ namespace ChivoFlixDesktop.Migrations
                         .HasMaxLength(500)
                         .IsUnicode(false);
 
+                    b.Property<string>("Pelicula")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("IdPeliculas")
                         .HasName("PK__pelicula__71DB443F16B1CBF9");
 

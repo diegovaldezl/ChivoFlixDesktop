@@ -42,6 +42,7 @@ namespace ChivoFlixDesktop
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtClave = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnSuscripcion = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -95,6 +96,7 @@ namespace ChivoFlixDesktop
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel1.Controls.Add(this.btnSuscripcion);
             this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.pictureBox3);
@@ -190,6 +192,16 @@ namespace ChivoFlixDesktop
             this.label2.TabIndex = 4;
             this.label2.Text = "Contraseña:";
             // 
+            // btnSuscripcion
+            // 
+            this.btnSuscripcion.Location = new System.Drawing.Point(114, 339);
+            this.btnSuscripcion.Name = "btnSuscripcion";
+            this.btnSuscripcion.Size = new System.Drawing.Size(75, 23);
+            this.btnSuscripcion.TabIndex = 13;
+            this.btnSuscripcion.Text = "button1";
+            this.btnSuscripcion.UseVisualStyleBackColor = true;
+            this.btnSuscripcion.Click += new System.EventHandler(this.btnSuscripcion_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -225,5 +237,6 @@ namespace ChivoFlixDesktop
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Button btnSuscripcion;
     }
 }

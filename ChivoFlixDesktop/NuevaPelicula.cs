@@ -36,15 +36,16 @@ namespace ChivoFlixDesktop
                 string director = txtDirector.Text;
                 string banner = txtBanner.Text;
                 int genero = int.Parse(txtGenero.Text);
+                string pelicula = txtPelicula.Text;
 
-                if (peliculas.InsertPelicula(anio, nombre, categoria, desc, calidad, director, banner, genero))
+                if (peliculas.InsertPelicula(anio, nombre, categoria, desc, calidad, director, banner, genero, pelicula))
                 {
                     MessageBox.Show("Pelicula Ingresado");
                     Close();
                 }
                 else
                 {
-                    MessageBox.Show("Pelicula no Ingreado");
+                    MessageBox.Show("Pelicula no Ingresada");
                 }
             }
             catch

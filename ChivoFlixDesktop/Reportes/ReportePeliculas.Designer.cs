@@ -31,6 +31,7 @@ namespace ChivoFlixDesktop.Reportes
         {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.ReportePeliculas1 = new ChivoFlixDesktop.ReportePeliculas();
+            this.ReportePeliculas2 = new ChivoFlixDesktop.ReportePeliculas();
             this.SuspendLayout();
             // 
             // crystalReportViewer1
@@ -41,6 +42,7 @@ namespace ChivoFlixDesktop.Reportes
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
+            this.crystalReportViewer1.ReportSource = this.ReportePeliculas2;
             this.crystalReportViewer1.Size = new System.Drawing.Size(800, 450);
             this.crystalReportViewer1.TabIndex = 0;
             this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
@@ -61,5 +63,6 @@ namespace ChivoFlixDesktop.Reportes
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
         private ChivoFlixDesktop.ReportePeliculas ReportePeliculas1;
+        private ChivoFlixDesktop.ReportePeliculas ReportePeliculas2;
     }
 }

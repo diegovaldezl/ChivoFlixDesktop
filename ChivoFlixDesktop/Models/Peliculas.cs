@@ -19,6 +19,7 @@ namespace ChivoFlixDesktop.Models
         public string Director { get; set; }
         public string Banner { get; set; }
         public int IdGeneros { get; set; }
+        public string Pelicula { get; set; }
 
         public virtual Generos IdGenerosNavigation { get; set; }
         public virtual ICollection<Listados> Listados { get; set; }

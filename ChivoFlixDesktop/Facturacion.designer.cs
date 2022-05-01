@@ -51,6 +51,7 @@ namespace ChivoFlixDesktop
             // 
             // dgvFacturacion
             // 
+            this.dgvFacturacion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvFacturacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFacturacion.Location = new System.Drawing.Point(13, 48);
             this.dgvFacturacion.Name = "dgvFacturacion";

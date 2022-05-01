@@ -60,6 +60,8 @@ namespace ChivoFlixDesktop
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtPelicula = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeliculas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -89,6 +91,7 @@ namespace ChivoFlixDesktop
             // 
             // dgvPeliculas
             // 
+            this.dgvPeliculas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPeliculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPeliculas.Location = new System.Drawing.Point(12, 80);
             this.dgvPeliculas.Name = "dgvPeliculas";
@@ -108,7 +111,7 @@ namespace ChivoFlixDesktop
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(319, 473);
+            this.btnEliminar.Location = new System.Drawing.Point(319, 479);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 4;
@@ -206,16 +209,18 @@ namespace ChivoFlixDesktop
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(197, 391);
+            this.txtDescripcion.Location = new System.Drawing.Point(197, 390);
+            this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(511, 20);
+            this.txtDescripcion.Size = new System.Drawing.Size(511, 38);
             this.txtDescripcion.TabIndex = 16;
             // 
             // txtBanner
             // 
             this.txtBanner.Location = new System.Drawing.Point(73, 434);
+            this.txtBanner.Multiline = true;
             this.txtBanner.Name = "txtBanner";
-            this.txtBanner.Size = new System.Drawing.Size(291, 20);
+            this.txtBanner.Size = new System.Drawing.Size(190, 36);
             this.txtBanner.TabIndex = 17;
             // 
             // label7
@@ -256,7 +261,7 @@ namespace ChivoFlixDesktop
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(374, 437);
+            this.label10.Location = new System.Drawing.Point(284, 437);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(45, 13);
             this.label10.TabIndex = 22;
@@ -264,14 +269,14 @@ namespace ChivoFlixDesktop
             // 
             // txtGenero
             // 
-            this.txtGenero.Location = new System.Drawing.Point(425, 434);
+            this.txtGenero.Location = new System.Drawing.Point(335, 434);
             this.txtGenero.Name = "txtGenero";
             this.txtGenero.Size = new System.Drawing.Size(100, 20);
             this.txtGenero.TabIndex = 23;
             // 
             // btnReporte
             // 
-            this.btnReporte.Location = new System.Drawing.Point(560, 473);
+            this.btnReporte.Location = new System.Drawing.Point(560, 479);
             this.btnReporte.Name = "btnReporte";
             this.btnReporte.Size = new System.Drawing.Size(75, 23);
             this.btnReporte.TabIndex = 24;
@@ -296,7 +301,7 @@ namespace ChivoFlixDesktop
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(273, 470);
+            this.pictureBox1.Location = new System.Drawing.Point(273, 476);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(40, 26);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -308,7 +313,7 @@ namespace ChivoFlixDesktop
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(514, 471);
+            this.pictureBox2.Location = new System.Drawing.Point(514, 476);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(40, 26);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -339,12 +344,31 @@ namespace ChivoFlixDesktop
             this.pictureBox5.TabIndex = 29;
             this.pictureBox5.TabStop = false;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(459, 437);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(30, 13);
+            this.label11.TabIndex = 30;
+            this.label11.Text = "Link:";
+            // 
+            // txtPelicula
+            // 
+            this.txtPelicula.Location = new System.Drawing.Point(496, 434);
+            this.txtPelicula.Multiline = true;
+            this.txtPelicula.Name = "txtPelicula";
+            this.txtPelicula.Size = new System.Drawing.Size(212, 36);
+            this.txtPelicula.TabIndex = 31;
+            // 
             // ListadoPeliculas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(720, 508);
+            this.Controls.Add(this.txtPelicula);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox2);
@@ -422,5 +446,7 @@ namespace ChivoFlixDesktop
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtPelicula;
     }
 }
